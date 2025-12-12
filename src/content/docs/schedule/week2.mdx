@@ -1,0 +1,314 @@
+---
+title: Week 2 [Mon, Jan 20th] - Tools
+description: Week 2 content for CS2103
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import WeekNavigation from '../../../components/WeekNavigation.astro';
+
+<WeekNavigation weekNumber={2} />
+
+<Tabs>
+  <TabItem label="📋 Summary">
+
+<div style={{padding: '1rem', background: '#fff3cd', border: '1px solid #ffeaa7', borderRadius: '8px', marginBottom: '1rem'}}>
+  <h3 style={{margin: '0 0 0.5rem 0'}}>⚠️ Reminder</h3>
+  <p style={{marginBottom: 0}}><strong>Finish Week 1 tasks first</strong> before starting on Week 2 tasks.</p>
+</div>
+
+<div style={{padding: '1rem', background: '#d4edda', border: '1px solid #c3e6cb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <h3 style={{margin: '0 0 0.5rem 0'}}>📢 Announcements</h3>
+  
+  <ul style={{marginBottom: 0}}>
+    <li><strong>Week 2->3 Briefing</strong>: In hybrid mode (F2F or Zoom) on <strong>Thursday from 4pm</strong></li>
+    <li><strong>iP Help Session</strong>: Follows the briefing at 4:50pm for those stuck with technical difficulties</li>
+    <li><strong>Week 2 Canvas quiz</strong>: Opens by Week 1 Wednesday (earlier than normal Friday 4pm)</li>
+    <li><strong>💰 Bonus participation points</strong>: Report website issues in the forum with <code>[BUG]</code> prefix</li>
+  </ul>
+</div>
+
+<div style={{padding: '1rem', background: '#fff3cd', border: '1px solid #ffeaa7', borderRadius: '8px', marginBottom: '1rem'}}>
+  <h3 style={{margin: '0 0 0.5rem 0'}}>🎥 [MUST-WATCH] Briefing Videos for Week 2</h3>
+  
+  <p>Watch these briefing videos before diving into the topics:</p>
+  
+  <ol style={{marginBottom: 0}}>
+    <li><strong>CS2103 iP Overview</strong> - Introduction to the individual project</li>
+    <li><strong>Tools Introduction</strong> - Overview of tools used in the course</li>
+  </ol>
+</div>
+
+### 📊 Weekly Overview
+
+<div style={{padding: '1rem', background: '#e3f2fd', borderRadius: '8px'}}>
+  <h4 style={{margin: '0 0 1rem 0'}}>Topics This Week</h4>
+  
+  **Software Engineering Topics:**
+  - **SE Intro**: Software Engineering pros and cons
+  - **Project Management**: SDLC Process Models: Basics
+  - **Revision Control**: RCS: Revision History
+  - **Implementation**: IDEs: Basic Features
+  - **Testing**: Automated Testing of Text UIs
+  
+  **Project Work:**
+  - Start the individual project (iP) - Duke chatbot
+  - Implement Levels 0-6 and additional increments
+</div>
+
+  </TabItem>
+  <TabItem label="ℹ️ Admin">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p style={{marginBottom: 0}}>This is the <strong>ℹ️ Admin</strong> tab of this week. It contains admin info relevant to this week.</p>
+</div>
+
+### Tasks for Week 2
+
+1. **Submit weekly quiz** 🅿️
+   - Read the weekly topics allocated for this week
+   - Submit the Weekly Quiz on Canvas to test your knowledge
+   - Weekly quizzes count for participation
+   - **Deadline**: Thursday 4pm (before the following lecture)
+
+2. **Get connected to our communication channels**
+   - Follow the 'Preparation' instructions in the [Tools - Communication](https://nus-cs2103-ay2526s2.github.io/website/admin/tools.html#communication) panel
+   - Get connected with the communication channels used by the course
+
+### Admin Topics to Read
+
+<div style={{padding: '1rem', background: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '8px'}}>
+  <p style={{margin: '0 0 0.5rem 0'}}><strong>Course Policies:</strong></p>
+  
+  - Policy on plagiarism
+  - Policy on reuse
+  - Policy on getting help from outsiders
+  - Policy on following instructions
+  - Policy on tech help
+  
+  <p style={{margin: '1rem 0 0.5rem 0'}}><strong>Course Information:</strong></p>
+  
+  - Appendix A: Course Principles
+  - FAQ: Why the course website is not on Canvas?
+  - FAQ: Why slides are not provided?
+</div>
+
+  </TabItem>
+  <TabItem label="📑 Topics">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p style={{marginBottom: 0}}>This is the <strong>📑 Topics</strong> tab of this week. It contains topics allocated to this week.</p>
+</div>
+
+### Software Engineering Topics
+
+#### 🌟 SE Introduction
+
+<details>
+<summary><strong>SE: Intro</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**Software Engineering** is not just about writing code. It includes:
+- Understanding requirements
+- Designing solutions
+- Managing projects
+- Testing thoroughly
+- Maintaining code over time
+
+**Pros of Software Engineering practices:**
+- Better code quality
+- Easier maintenance
+- Reduced bugs
+- Team collaboration
+
+**Cons:**
+- Initial overhead
+- Learning curve
+- May seem unnecessary for small projects
+
+</div>
+</details>
+
+#### 📊 Project Management
+
+<details>
+<summary><strong>SDLC Process Models: Basics</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**What are SDLC process models?**
+Software Development Life Cycle (SDLC) models provide structured approaches to software development.
+
+**Sequential Models (e.g., Waterfall):**
+- Complete each phase before moving to the next
+- Good for projects with clear, stable requirements
+- Hard to accommodate changes
+
+**Iterative Models (e.g., Agile):**
+- Develop in cycles/iterations
+- Get feedback early and often
+- Easier to accommodate changes
+
+</div>
+</details>
+
+#### 🔄 Revision Control
+
+<details>
+<summary><strong>RCS: Revision History</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**Recording folder history:**
+- Track changes over time
+- See who made what changes
+- Revert to previous versions if needed
+
+**Backing up on cloud:**
+- Push to remote repositories (GitHub)
+- Protects against local failures
+- Enables collaboration
+
+**Using revision history:**
+- `git log` - view commit history
+- `git diff` - see changes
+- `git checkout` - go to specific version
+
+</div>
+</details>
+
+#### 💻 Implementation
+
+<details>
+<summary><strong>IDEs: Basic Features</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**What are IDEs?**
+Integrated Development Environments provide tools for coding in one place.
+
+**Key features:**
+- Syntax highlighting
+- Auto-completion
+- Error detection
+- Debugging tools
+- Version control integration
+
+**IntelliJ IDEA setup:**
+1. Create new project
+2. Set up JDK
+3. Configure project structure
+4. Add libraries/dependencies
+
+</div>
+</details>
+
+#### 🧪 Testing
+
+<details>
+<summary><strong>Automated Testing of Text UIs</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**What is testing?**
+Verifying that software works as expected.
+
+**Regression Testing:**
+- Re-run tests after changes
+- Ensure new code doesn't break existing features
+
+**Test Automation:**
+- Write scripts to test automatically
+- Faster than manual testing
+- Consistent and repeatable
+
+**Testing Text UIs:**
+- Capture expected output
+- Compare with actual output
+- Use input/output redirection
+
+</div>
+</details>
+
+  </TabItem>
+  <TabItem label="🗂️ Project">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p style={{marginBottom: 0}}>This is the <strong>🗂️ Project</strong> tab of this week. It contains project-related information relevant to this week.</p>
+</div>
+
+### Individual Project (iP): Week 2
+
+<div style={{padding: '1rem', background: '#e3f2fd', borderRadius: '8px', marginBottom: '1rem'}}>
+  <h4 style={{margin: '0 0 0.5rem 0'}}>📌 Summary</h4>
+  <p style={{marginBottom: 0}}>Start building Duke, a personal assistant chatbot. Complete Levels 0-6 and additional increments.</p>
+</div>
+
+#### Tasks for Week 2
+
+1. **Learn about the project**
+   - Read the [Duke project overview](https://nus-cs2103-ay2526s2.github.io/website/se-book-adapted/projectDuke/)
+   - Understand objectives and grading
+
+2. **Set up prerequisites**
+   - Ensure Java JDK 17 is installed
+   - Git is configured
+   - IntelliJ IDEA is ready
+
+3. **Set up project**
+   - Fork the Duke repository
+   - Clone to your computer
+   - Open in IntelliJ IDEA
+
+4. **Add increments while committing frequently** <span style={{background: '#dc3545', color: 'white', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.9rem'}}>⏰ Thursday 4pm</span>
+   
+   Complete these increments:
+   - **Level-0**: Rename, Greet, Exit
+   - **Level-1**: Echo
+   - **Level-2**: Add, List
+   - **Level-3**: Mark as Done
+   - **Level-4**: ToDo, Event, Deadline
+   - **A-TextUiTesting**: Automated Text UI Testing
+   - **Level-5**: Handle Errors
+   - **Level-6**: Delete
+   - **A-Enums**: Use Enums (if applicable)
+
+#### 💡 Important Notes
+
+<div style={{padding: '1rem', background: '#fff3cd', border: '1px solid #ffeaa7', borderRadius: '8px'}}>
+  <ul style={{marginBottom: 0}}>
+    <li>Follow instructions <strong>carefully</strong></li>
+    <li>Commit code at important points (minimally after each increment)</li>
+    <li>Use proper Git tags for each increment</li>
+    <li>Push code to your fork</li>
+    <li>Follow plagiarism policies</li>
+  </ul>
+</div>
+
+### Team Project (tP)
+
+<div style={{padding: '2rem', background: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '8px', textAlign: 'center'}}>
+  <h3 style={{margin: 0, color: '#666'}}>No team project activities allocated for Week 2</h3>
+</div>
+
+  </TabItem>
+  <TabItem label="👥 Tutorial">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p style={{marginBottom: 0}}>This is the <strong>👥 Tutorial</strong> tab of this week. It contains information relevant to the week's tutorial (if any).</p>
+</div>
+
+### Tutorial Activities
+
+<div style={{padding: '1rem', background: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '8px'}}>
+  <h3 style={{margin: '0 0 1rem 0', color: '#666'}}>No tutorials in this week</h3>
+  
+  <p><strong>💡 Recommendation:</strong> You are strongly encouraged to use the tutorial timeslot+venue to sit together with your team/tutorial-mates and work on the iP together (so that you can help each other).</p>
+  
+  <p style={{marginBottom: 0}}><strong>💬 Getting Help:</strong> Post any doubts/problems in the forum. The teaching team will be monitoring the forum and will respond quickly.</p>
+</div>
+
+  </TabItem>
+</Tabs>
+
+<WeekNavigation weekNumber={2} />

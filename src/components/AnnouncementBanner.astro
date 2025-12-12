@@ -1,0 +1,175 @@
+---
+export interface Props {
+  id: string;
+  variant?: 'info' | 'warning' | 'success';
+  dismissible?: boolean;
+  icon?: string;
+}
+
+const { id, variant = 'info', dismissible = true, icon } = Astro.props;
+
+const icons = {
+  info: '🎯',
+  warning: '📚',
+  success: '✨'
+};
+
+const displayIcon = icon || icons[variant] || '📢';
+---
+
+<announcement-banner data-id={id} data-dismissible={dismissible} class={`announcement-banner ${variant}`}>
+  <div class="banner-content">
+    <span class="banner-icon">{displayIcon}</span>
+    <span class="banner-text">
+      <slot />
+    </span>
+    {dismissible && (
+      <button class="dismiss-btn" aria-label="Dismiss announcement">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    )}
+  </div>
+</announcement-banner>
+
+<style>
+  /* Target the custom element directly to override browser defaults */
+  announcement-banner {
+    display: block;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    position: relative;
+  }
+  
+  .announcement-banner {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Variant styles are defined in cs2103-theme.css */
+  
+  .banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 60px 14px 20px;
+    position: relative; /* This creates the positioning context for the dismiss button */
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    z-index: 1; /* Ensure content is above background */
+  }
+  
+  .banner-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  
+  .banner-text {
+    flex: 0 1 auto;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .dismiss-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    color: currentColor;
+    z-index: 30; /* Higher than any other element */
+    pointer-events: all; /* Force pointer events */
+  }
+  
+  .dismiss-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .dismiss-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .banner-content {
+      padding: 12px 40px 12px 16px;
+    }
+    
+    .banner-text {
+      font-size: 13px;
+    }
+  }
+  
+  /* Fade out animation */
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+</style>
+
+<script>
+  class AnnouncementBannerElement extends HTMLElement {
+    connectedCallback() {
+      const id = this.dataset.id;
+      const dismissible = this.dataset.dismissible === 'true';
+      
+      if (dismissible) {
+        const key = `cs2103-announcement-${id}`;
+        
+        // Check if already dismissed
+        if (localStorage.getItem(key) === 'dismissed') {
+          this.setAttribute('hidden', '');
+          this.style.display = 'none';
+          // Dispatch event after a tiny delay to ensure DOM is ready
+          setTimeout(() => {
+            window.dispatchEvent(new CustomEvent('banner-dismissed'));
+          }, 10);
+          return;
+        }
+        
+        // Handle dismiss button
+        const dismissBtn = this.querySelector('.dismiss-btn');
+        dismissBtn?.addEventListener('click', () => {
+          localStorage.setItem(key, 'dismissed');
+          
+          // Animate out with smooth fadeOut
+          this.style.animation = 'fadeOut 0.4s ease-out forwards';
+          
+          setTimeout(() => {
+            this.setAttribute('hidden', '');
+            this.style.display = 'none';
+            // Dispatch event to adjust layout
+            window.dispatchEvent(new CustomEvent('banner-dismissed'));
+          }, 400);
+        });
+      }
+    }
+  }
+  
+  // Register custom element if not already registered
+  if (!customElements.get('announcement-banner')) {
+    customElements.define('announcement-banner', AnnouncementBannerElement);
+  }
+</script>

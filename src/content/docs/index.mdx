@@ -1,0 +1,107 @@
+---
+title: Homepage
+description: Homepage
+template: splash
+hero:
+  title: 'CS2103DE: Software Engineering'
+  tagline: A balanced, iterative, and brownfield introduction to Software Engineering...
+  actions:
+    - text: View Schedule
+      link: /schedule/week1/
+      icon: rocket
+      variant: primary
+    - text: Course Info
+      link: /admin/expectations/
+      icon: document
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+
+<div style={{fontSize: '1.1rem', lineHeight: '1.8', margin: '3rem auto', maxWidth: '900px', padding: '2rem 3rem', background: 'var(--sl-color-gray-6)', borderRadius: '16px', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)' }}>
+
+CS2103DE is an **introductory Software Engineering course**. It has a **50-50 balance** of basic SE theory knowledge and practical skills that you need to gain before industry internships or higher-level project courses. The course follows an **iterative approach** to covering topics. It is also one of the rare SE courses that includes a **brownfield project**, in addition to a **greenfield project**.
+
+</div>
+
+## Quick Access
+
+<CardGrid stagger>
+  <Card title="Weekly Schedule" icon="list-format">
+    Access the course schedule, weekly topics, and deliverables for the semester.
+  </Card>
+  
+  <Card title="Individual Project (iP)" icon="rocket">
+    Build Duke, your personal assistant chatbot from scratch.
+  </Card>
+  
+  <Card title="Team Project (tP)" icon="puzzle">
+    Enhance AddressBook Level 3 with your team in a brownfield project.
+  </Card>
+  
+  <Card title="Course Textbook" icon="document">
+    Software Engineering for Self-Directed Learners - integrated into the course.
+  </Card>
+</CardGrid>
+
+## Course Philosophy
+
+<div style={{maxWidth: '900px', margin: '2rem auto', padding: '0 2rem', fontSize: '1.05rem', lineHeight: '1.8'}}>
+
+On the **theory side**, this course is supported by a customized online textbook [Software Engineering for Self-Directed Learners](https://se-edu.github.io/se-book/), integrated into this course website.
+
+The **practice side**, you will first ramp up your technical skills by doing a small individual project (greenfield) in which you will develop a personal assistant chatbot called **Duke**. Then, you will move to a team project (brownfield) in which you will take over an existing project **AddressBook-Level3** (AB3) -- a relatively small yet non-trivial (6 KLoC) generic product -- and enhance it into a better product or evolve it in a direction that you choose.
+
+</div>
+
+<details style={{maxWidth: '900px', margin: '3rem auto', padding: '2rem', background: 'var(--sl-color-gray-6)', borderRadius: '12px', border: '1px solid var(--sl-color-gray-5)'}}>
+<summary><strong>What does mean to 'follow an iterative approach in covering topics'?</strong></summary>
+
+It means, we cover a little bit of all SE aspects at first and then iteratively go deeper into them later, revisiting each aspect many times over the course of the semester. In contrast, a _sequential_ approach would have covered one SE aspect before moving to the next (e.g., teach the requirements aspect completely before moving to the design aspect).
+
+**In each week, we cover topics that are most relevant to the project tasks that you are expected to do around that time.**
+
+This way of 'jumping around' topics feels chaotic but consider the benefits:
+
+* It allows you to **start doing SE projects early**, and do it iteratively too. That is, you can start with a small project from the very start and make it bigger progressively, learning from earlier mistakes, and getting multiple chances to improve on previous attempts.
+* **Important SE aspects such as testing can be practiced from the very beginning.** If we followed a sequential approach, you can only learn it near the end of the semester.
+* It **lowers the risk of missing out some SE aspects altogether**. For example, suppose your schedule got heavier in the second half of the semester, and you could barely keep up with the course during that half. You still go away with the basic knowledge of _all_ SE aspects rather than knowing some aspects deeply while missing some other aspects altogether.
+
+</details>
+
+## Frequently Asked Questions
+
+<details style={{maxWidth: '900px', margin: '1rem auto', padding: '1.5rem', background: 'var(--sl-color-gray-6)', borderRadius: '8px'}}>
+<summary><strong>What are the differences between CS2103 and CS2103T?</strong></summary>
+
+* **CS2103** is taken by CS majors and a few other majors. CS2103 students take CS2103 only (4 units).
+* **CS2103T** (note the extra 'T' at the end) is a 6-unit course that has CS2103 (4 units) + CS2101 (2 units) taught concurrently. CS2103T is taken by CEG majors and a few other majors.
+
+</details>
+
+<details style={{maxWidth: '900px', margin: '1rem auto', padding: '1.5rem', background: 'var(--sl-color-gray-6)', borderRadius: '8px'}}>
+<summary><strong>How much programming experience do I need to do this course?</strong></summary>
+
+You are expected to have reasonable programming skills, preferably in Java. CS2030/CS2040 or equivalent programming courses are prerequisites. 
+
+If you are totally new to Java, you need to get yourself up to speed by going through some Java resources. However, we will still cover Java basics during the first few weeks.
+
+</details>
+
+<details style={{maxWidth: '900px', margin: '1rem auto', padding: '1.5rem', background: 'var(--sl-color-gray-6)', borderRadius: '8px'}}>
+<summary><strong>What languages are we using in this course?</strong></summary>
+
+Technologies we use: Java, JavaFX, Git, GitHub, Markdown, PlantUML, JUnit, Gradle
+
+The main language used in this course is Java. You will also learn to use Git, GitHub, Markdown, and PlantUML. We expect you to pick up these tools on your own, but we will provide guidance along the way.
+
+</details>
+
+<details style={{maxWidth: '900px', margin: '1rem auto', padding: '1.5rem', background: 'var(--sl-color-gray-6)', borderRadius: '8px'}}>
+<summary><strong>How heavy is the workload?</strong></summary>
+
+Expect to spend 10-12 hours per week on this course, including lectures, tutorials, and project work. The workload is front-loaded to help you build momentum early.
+
+The course requires you to move fast in the first half of the semester. The pace will slow down a bit in the second half.
+
+</details>

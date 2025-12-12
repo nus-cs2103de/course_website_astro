@@ -1,0 +1,701 @@
+/* Ensure no horizontal scrollbar from edge-to-edge elements */
+body {
+  overflow-x: hidden;
+}
+
+/* Make content area wider to balance the layout */
+@media (min-width: 1280px) {
+  :root {
+    --sl-content-width: 62rem; /* Balanced width with proper TOC spacing */
+    --sl-sidebar-width: 16.5rem; /* Keep sidebar width */
+  }
+  
+  /* Slightly increase TOC width for better spacing */
+  starlight-toc {
+    --sl-toc-width: 14rem; /* Increased from default 13rem for more breathing room */
+  }
+}
+
+/* Even wider for larger screens */
+@media (min-width: 1440px) {
+  :root {
+    --sl-content-width: 70rem; /* Good balance */
+  }
+}
+
+/* Wider still for very large screens */
+@media (min-width: 1680px) {
+  :root {
+    --sl-content-width: 78rem; /* Proportional increase */
+  }
+}
+
+/* Maximum width for ultra-wide screens */
+@media (min-width: 1920px) {
+  :root {
+    --sl-content-width: 85rem; /* Wide but balanced with TOC */
+  }
+}
+
+/* Alternative: Hide TOC on specific pages for true centering */
+.no-toc starlight-toc {
+  display: none !important;
+}
+
+/* When TOC is hidden, center the content properly */
+.no-toc main {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* CRITICAL FIX: Force black text in light mode */
+:root:not([data-theme="dark"]) {
+  --sl-color-white: #000000 !important;
+  --sl-color-text: #000000 !important;
+}
+
+/* Ensure most text is black in light mode */
+:root:not([data-theme="dark"]) body {
+  color: #000000 !important;
+}
+
+/* Fix sidebar active item highlight - light mode */
+:root:not([data-theme="dark"]) [aria-current="page"] {
+  background-color: var(--sl-color-gray-6);
+  position: relative;
+}
+
+/* Add accent line to light mode for consistency */
+:root:not([data-theme="dark"]) nav [aria-current="page"]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--cs2103-primary);
+}
+
+/* Preserve specific colors only where needed */
+:root:not([data-theme="dark"]) a[href] {
+  color: var(--sl-color-text-accent) !important;
+}
+
+/* Fix search bar in light mode - white background with dark text */
+:root:not([data-theme="dark"]) button[data-open-modal] {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  color: #666666 !important;
+}
+
+:root:not([data-theme="dark"]) button[data-open-modal] svg {
+  color: #666666 !important;
+}
+
+:root:not([data-theme="dark"]) button[data-open-modal]:hover {
+  background-color: #f5f5f5 !important;
+  border-color: #cccccc !important;
+}
+
+/* Fix search input in modal */
+:root:not([data-theme="dark"]) [type="search"] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+:root:not([data-theme="dark"]) [type="search"]::placeholder {
+  color: #999999 !important;
+}
+
+/* Announcement banner colors are handled in cs2103-theme.css */
+
+/* Fix hero action button text colors */
+.sl-link-button.primary {
+  background-color: var(--cs2103-primary) !important;
+  color: #000000 !important;
+}
+
+.sl-link-button.secondary {
+  color: var(--sl-color-text-accent) !important;
+}
+
+/* Light mode button styles */
+:root:not([data-theme="dark"]) .sl-link-button.primary {
+  background-color: var(--cs2103-primary) !important;
+  color: #000000 !important;
+}
+
+:root:not([data-theme="dark"]) .sl-link-button.secondary {
+  border-color: var(--cs2103-primary) !important;
+  color: var(--cs2103-primary) !important;
+}
+
+/* Dark mode button styles */
+[data-theme="dark"] .sl-link-button.primary {
+  background-color: var(--cs2103-primary-light) !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .sl-link-button.secondary {
+  border-color: var(--cs2103-primary-light) !important;
+  color: var(--cs2103-primary-light) !important;
+}
+
+/* Fix search button in dark mode - ensure white text */
+[data-theme="dark"] button[data-open-modal] {
+  background-color: var(--sl-color-gray-7) !important;
+  border: 1px solid var(--sl-color-gray-5) !important;
+  color: #ffffff !important;
+}
+
+/* Target all text elements inside the search button */
+[data-theme="dark"] button[data-open-modal] * {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] button[data-open-modal] svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+[data-theme="dark"] button[data-open-modal] kbd {
+  background-color: var(--sl-color-gray-6) !important;
+  border-color: var(--sl-color-gray-5) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] button[data-open-modal]:hover {
+  background-color: var(--sl-color-gray-6) !important;
+  border-color: var(--sl-color-gray-4) !important;
+}
+
+/* Ensure the placeholder text and keyboard shortcut are visible */
+[data-theme="dark"] button[data-open-modal] .sl-search-button-placeholder {
+  color: #ffffff !important;
+}
+
+/* More specific selectors for Starlight's search button structure */
+[data-theme="dark"] .sl-search button {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .sl-search button span {
+  color: #ffffff !important;
+}
+
+/* Target the search component specifically */
+[data-theme="dark"] site-search button {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] site-search button * {
+  color: #ffffff !important;
+}
+
+/* Starlight uses custom elements, target them specifically */
+[data-theme="dark"] starlight-search button {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] starlight-search button * {
+  color: #ffffff !important;
+}
+
+/* Fix search modal input in dark mode */
+[data-theme="dark"] [type="search"] {
+  background-color: var(--sl-color-gray-7) !important;
+  color: #ffffff !important;
+  border-color: var(--sl-color-gray-5) !important;
+}
+
+[data-theme="dark"] [type="search"]::placeholder {
+  color: #cccccc !important;
+}
+
+/* ===== PAGEFIND SEARCH MODAL FIXES ===== */
+
+/* Light mode search modal - ensure black text */
+:root:not([data-theme="dark"]) .pagefind-ui,
+:root:not([data-theme="dark"]) .pagefind-ui * {
+  color: #000000 !important;
+}
+
+/* Light mode search input */
+:root:not([data-theme="dark"]) .pagefind-ui__search-input {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  border-color: #e0e0e0 !important;
+}
+
+:root:not([data-theme="dark"]) .pagefind-ui__search-clear {
+  color: #666666 !important;
+}
+
+/* Light mode modal background */
+:root:not([data-theme="dark"]) .pagefind-ui__layout {
+  background-color: #ffffff !important;
+}
+
+:root:not([data-theme="dark"]) .pagefind-ui__form {
+  background-color: #ffffff !important;
+}
+
+/* Light mode results */
+:root:not([data-theme="dark"]) .pagefind-ui__results {
+  background-color: #ffffff !important;
+}
+
+:root:not([data-theme="dark"]) .pagefind-ui__result {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+:root:not([data-theme="dark"]) .pagefind-ui__result-title {
+  color: #000000 !important;
+}
+
+:root:not([data-theme="dark"]) .pagefind-ui__result-excerpt {
+  color: #666666 !important;
+}
+
+:root:not([data-theme="dark"]) .pagefind-ui__result-link {
+  color: #666666 !important;
+  text-decoration: underline !important;
+}
+
+:root:not([data-theme="dark"]) .pagefind-ui__message {
+  color: #666666 !important;
+}
+
+/* Light mode result hover */
+:root:not([data-theme="dark"]) .pagefind-ui__result:hover {
+  background-color: #f5f5f5 !important;
+  border-color: #cccccc !important;
+}
+
+/* Dark mode search modal - ensure white text */
+[data-theme="dark"] .pagefind-ui,
+[data-theme="dark"] .pagefind-ui * {
+  color: #ffffff !important;
+}
+
+/* Dark mode search input */
+[data-theme="dark"] .pagefind-ui__search-input {
+  color: #ffffff !important;
+  background-color: #1a1a1a !important;
+  border-color: #333333 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__search-clear {
+  color: #cccccc !important;
+}
+
+/* Dark mode modal background */
+[data-theme="dark"] .pagefind-ui__layout {
+  background-color: #000000 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__form {
+  background-color: #000000 !important;
+}
+
+/* Dark mode results */
+[data-theme="dark"] .pagefind-ui__results {
+  background-color: #000000 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__result {
+  color: #ffffff !important;
+  background-color: #1a1a1a !important;
+  border: 1px solid #333333 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+[data-theme="dark"] .pagefind-ui__result-title {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .pagefind-ui__result-excerpt {
+  color: #cccccc !important;
+}
+
+[data-theme="dark"] .pagefind-ui__result-link {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .pagefind-ui__message {
+  color: #999999 !important;
+}
+
+/* Dark mode result hover */
+[data-theme="dark"] .pagefind-ui__result:hover {
+  background-color: #2a2a2a !important;
+  border-color: #444444 !important;
+}
+
+/* Starlight search dialog overrides */
+:root:not([data-theme="dark"]) [data-pagefind-ui] {
+  --pagefind-ui-text: #000000 !important;
+  --pagefind-ui-background: #ffffff !important;
+  --pagefind-ui-border: #e0e0e0 !important;
+  --pagefind-ui-primary: #666666 !important;
+}
+
+[data-theme="dark"] [data-pagefind-ui] {
+  --pagefind-ui-text: #ffffff !important;
+  --pagefind-ui-background: #000000 !important;
+  --pagefind-ui-border: #333333 !important;
+  --pagefind-ui-primary: #ffffff !important;
+}
+
+/* Dialog and modal overrides */
+:root:not([data-theme="dark"]) dialog {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] dialog {
+  color: #ffffff !important;
+}
+
+/* Search icon fix for light mode */
+:root:not([data-theme="dark"]) .pagefind-ui__search-icon {
+  color: #666666 !important;
+  fill: #666666 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__search-icon {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* Additional Starlight-specific search modal fixes */
+:root:not([data-theme="dark"]) .sl-search-modal,
+:root:not([data-theme="dark"]) .sl-search-modal * {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .sl-search-modal,
+[data-theme="dark"] .sl-search-modal * {
+  color: #ffffff !important;
+}
+
+/* Fix any SVG paths in search */
+:root:not([data-theme="dark"]) .pagefind-ui svg path {
+  fill: #666666 !important;
+}
+
+[data-theme="dark"] .pagefind-ui svg path {
+  fill: #ffffff !important;
+}
+
+/* Ensure search form elements are styled properly */
+:root:not([data-theme="dark"]) .pagefind-ui__form {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__form {
+  color: #ffffff !important;
+}
+
+/* Fix loading state text */
+:root:not([data-theme="dark"]) .pagefind-ui__loading {
+  color: #666666 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__loading {
+  color: #cccccc !important;
+}
+
+/* Fix dark mode theme toggle */
+[data-theme="dark"] starlight-theme-select {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] starlight-theme-select label {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] starlight-theme-select select {
+  color: #ffffff !important;
+  background-color: transparent !important;
+  border-color: var(--sl-color-gray-5) !important;
+}
+
+[data-theme="dark"] starlight-theme-select option {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+/* Make moon icon green like GitHub icon */
+[data-theme="dark"] starlight-theme-select svg {
+  color: var(--cs2103-primary-light) !important;
+  fill: var(--cs2103-primary-light) !important;
+}
+
+/* Fix hero tagline in dark mode */
+[data-theme="dark"] .hero-tagline {
+  color: #ffffff !important;
+}
+
+/* Ensure all text in hero section is white in dark mode */
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] .hero p {
+  color: #ffffff !important;
+}
+
+/* Fix the main title and tagline specifically */
+[data-theme="dark"] h1[data-page-title] {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] [data-page-title] + p {
+  color: #ffffff !important;
+}
+
+/* Theme toggle specific fixes */
+[data-theme="dark"] .sl-select {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .sl-select select {
+  color: #ffffff !important;
+}
+
+/* Make the theme icon (moon) green */
+[data-theme="dark"] starlight-theme-select svg path {
+  fill: var(--cs2103-primary-light) !important;
+}
+
+/* Ensure splash/hero content is white */
+[data-theme="dark"] .splash h1,
+[data-theme="dark"] .splash p,
+[data-theme="dark"] .splash .sl-markdown-content {
+  color: #ffffff !important;
+}
+
+/* Specific fix for Starlight hero tagline */
+[data-theme="dark"] .sl-hero-tagline {
+  color: #ffffff !important;
+}
+
+/* Target the hero component directly */
+[data-theme="dark"] .hero .tagline,
+[data-theme="dark"] [class*="hero"] [class*="tagline"],
+[data-theme="dark"] .sl-flex .tagline {
+  color: #ffffff !important;
+}
+
+/* Force all paragraph text in hero to be white */
+[data-theme="dark"] .hero p,
+[data-theme="dark"] [class*="hero"] p {
+  color: #ffffff !important;
+}
+
+/* Target by hero structure */
+[data-theme="dark"] main > div:first-child p {
+  color: #ffffff !important;
+}
+
+/* Removed background conversion rules - keeping original colored boxes */
+
+/* MONOCHROME SEARCH MODAL - Remove ALL colors */
+
+/* For dark mode, convert bright backgrounds FIRST */
+[data-theme="dark"] .pagefind-ui__result [style*="background:#d1ecf1"],
+[data-theme="dark"] .pagefind-ui__result [style*="background-color:#d1ecf1"],
+[data-theme="dark"] .pagefind-ui__result [style*="background:#d4edda"],
+[data-theme="dark"] .pagefind-ui__result [style*="background-color:#d4edda"],
+[data-theme="dark"] .pagefind-ui__result [style*="background:#fff3cd"],
+[data-theme="dark"] .pagefind-ui__result [style*="background-color:#fff3cd"],
+[data-theme="dark"] .pagefind-ui__result [style*="background:#f8f9fa"],
+[data-theme="dark"] .pagefind-ui__result [style*="background-color:#f8f9fa"],
+[data-theme="dark"] .pagefind-ui__result [style*="background:#e8f5e9"],
+[data-theme="dark"] .pagefind-ui__result [style*="background-color:#e8f5e9"],
+[data-theme="dark"] .pagefind-ui__result [style*="background:#E3F2FD"],
+[data-theme="dark"] .pagefind-ui__result [style*="background:#e3f2fd"],
+[data-theme="dark"] .pagefind-ui__result [style*="background-color:#E3F2FD"],
+[data-theme="dark"] .pagefind-ui__result [style*="background-color:#e3f2fd"] {
+  background: #2a2a2a !important;
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+/* For light mode, just remove all backgrounds */
+:root:not([data-theme="dark"]) .pagefind-ui__result [style*="background"] {
+  background: none !important;
+  background-color: transparent !important;
+}
+
+/* Light mode - ensure black text throughout */
+:root:not([data-theme="dark"]) .pagefind-ui__result,
+:root:not([data-theme="dark"]) .pagefind-ui__result * {
+  color: #000000 !important;
+}
+
+/* Override link colors to be black */
+:root:not([data-theme="dark"]) .pagefind-ui__result a {
+  color: #000000 !important;
+}
+
+/* Fix "Load more results" button */
+:root:not([data-theme="dark"]) .pagefind-ui__button {
+  background-color: #f0f0f0 !important;
+  color: #000000 !important;
+  border: 1px solid #cccccc !important;
+}
+
+:root:not([data-theme="dark"]) .pagefind-ui__button:hover {
+  background-color: #e0e0e0 !important;
+}
+
+/* Dark mode - ensure white text throughout */
+[data-theme="dark"] .pagefind-ui__result,
+[data-theme="dark"] .pagefind-ui__result * {
+  color: #ffffff !important;
+}
+
+/* Fix "Load more results" button in dark mode */
+[data-theme="dark"] .pagefind-ui__button {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+  border: 1px solid #555555 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__button:hover {
+  background-color: #444444 !important;
+}
+
+/* Handle badges/spans with inline styles */
+:root:not([data-theme="dark"]) .pagefind-ui__result span[style*="padding"] {
+  background: #f0f0f0 !important;
+  color: #000000 !important;
+  border: none !important;
+}
+
+[data-theme="dark"] .pagefind-ui__result span[style*="padding"] {
+  background: #333333 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+/* Ensure result excerpts use proper contrast */
+:root:not([data-theme="dark"]) .pagefind-ui__result-excerpt {
+  color: #666666 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__result-excerpt {
+  color: #999999 !important;
+}
+
+/* Fix sidebar selected item in dark mode - subtle and elegant */
+[data-theme="dark"] nav [aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  position: relative;
+}
+
+/* Add a subtle accent line instead of heavy background */
+[data-theme="dark"] nav [aria-current="page"]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--cs2103-primary-light);
+}
+
+/* Ensure text is visible */
+[data-theme="dark"] nav [aria-current="page"] * {
+  color: #ffffff !important;
+}
+
+/* Starlight-specific sidebar selected state */
+[data-theme="dark"] .sidebar [aria-current="page"],
+[data-theme="dark"] starlight-sidebar [aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+}
+
+/* Remove hover effects in dark mode to match light mode behavior */
+
+/* Fix the sidebar link colors */
+[data-theme="dark"] nav a:not([aria-current="page"]) {
+  color: #e0e0e0 !important;
+}
+
+/* Ensure nested items are also styled correctly */
+[data-theme="dark"] nav [aria-current="page"] + ul a {
+  color: #e0e0e0 !important;
+}
+
+/* Starlight-specific sidebar fixes */
+[data-theme="dark"] starlight-sidebar [aria-current="page"],
+[data-theme="dark"] .sl-sidebar [aria-current="page"] {
+  background-color: #2d3561 !important;
+  color: #ffffff !important;
+}
+
+/* Additional white and light gray conversions */
+[data-theme="dark"] [style*="background:white"],
+[data-theme="dark"] [style*="background-color:white"],
+[data-theme="dark"] [style*="background: white"],
+[data-theme="dark"] [style*="background-color: white"],
+[data-theme="dark"] [style*="background:#fff"],
+[data-theme="dark"] [style*="background-color:#fff"],
+[data-theme="dark"] [style*="background: #fff"],
+[data-theme="dark"] [style*="background-color: #fff"],
+[data-theme="dark"] [style*="background:#ffffff"],
+[data-theme="dark"] [style*="background-color:#ffffff"],
+[data-theme="dark"] [style*="background: #ffffff"],
+[data-theme="dark"] [style*="background-color: #ffffff"] {
+  background: #2a2a2a !important;
+  background-color: #2a2a2a !important;
+}
+
+/* More light grays */
+[data-theme="dark"] [style*="background:#eeeeee"],
+[data-theme="dark"] [style*="background-color:#eeeeee"],
+[data-theme="dark"] [style*="background:#eee"],
+[data-theme="dark"] [style*="background-color:#eee"],
+[data-theme="dark"] [style*="background:#f7f7f7"],
+[data-theme="dark"] [style*="background-color:#f7f7f7"],
+[data-theme="dark"] [style*="background:#fafafa"],
+[data-theme="dark"] [style*="background-color:#fafafa"],
+[data-theme="dark"] [style*="background:#f6f7f9"],
+[data-theme="dark"] [style*="background-color:#f6f7f9"] {
+  background: #2a2a2a !important;
+  background-color: #2a2a2a !important;
+}
+
+/* Convert code block backgrounds to dark in dark mode */
+[data-theme="dark"] pre[style*="background-color: rgb(248"],
+[data-theme="dark"] pre[style*="background-color: rgb(250"],
+[data-theme="dark"] pre[style*="background-color: rgb(255"],
+[data-theme="dark"] pre[style*="background-color: rgb(245"],
+[data-theme="dark"] pre[style*="background-color: rgb(240"] {
+  background-color: #1e1e1e !important;
+}
+
+/* Convert RGB format backgrounds to dark */
+[data-theme="dark"] [style*="rgb(248, 249, 250)"],
+[data-theme="dark"] [style*="rgb(245, 245, 245)"],
+[data-theme="dark"] [style*="rgb(250, 250, 250)"] {
+  background: #2a2a2a !important;
+}
+
+/* Fix code blocks specifically */
+[data-theme="dark"] .expressive-code,
+[data-theme="dark"] .expressive-code pre {
+  background-color: #1e1e1e !important;
+}
+
+/* Fix inline code backgrounds - only in main content */
+[data-theme="dark"] main code {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Removed details/summary background colors to avoid gray rectangles */

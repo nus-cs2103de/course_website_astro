@@ -1,0 +1,2215 @@
+---
+title: Week 1 [Mon, Jan 13th] - Introduction
+description: Week 1 content for CS2103
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import WeekNavigation from '../../../components/WeekNavigation.astro';
+
+<WeekNavigation weekNumber={1} />
+
+<Tabs>
+  <TabItem label="📋 Summary">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <h3 style={{margin: '0 0 0.5rem 0'}}>OK, I'm here. What am I looking at? What should I do next? ...</h3>
+  
+  <p>This is the <strong>📋 Summary tab</strong> of the weekly schedule page of this week. It contains a summary of the week, and announcements relevant to that week.</p>
+  
+  <p>In each week, you are expected to go through all the tabs for that week (i.e., 📑 Topics, ℹ️ Admin Info, ...) given at the top of the weekly schedule page and follow the instructions in them. FYI, a <strong>full timeline</strong> is available too.</p>
+  
+  <p style={{marginBottom: 0}}><strong>Before you move to other tabs, take note of any important information in this summary tab</strong>, such as announcements relevant to this week and briefing videos to watch.</p>
+</div>
+
+<div style={{padding: '1rem', background: '#d4edda', border: '1px solid #c3e6cb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <h3 style={{margin: '0 0 0.5rem 0'}}>Now, some announcements relevant to this week ...</h3>
+  
+  <ul style={{marginBottom: 0}}>
+    <li><strong>There is no lecture in week 1</strong>. In lieu of that, we are giving you a series of pre-recorded briefing videos (given in the panel below), so that you can get started early.</li>
+    <li>Our first lecture will be on <strong>week 2</strong> (Fri, Jan 24th 1600-1800), delivered in hybrid mode.</li>
+    <li><strong>Our tutorials start on week 3</strong>.</li>
+    <li><strong>If you are bookmarking the course website in your browser</strong>, bookmark the URL <code>https://nus-cs2103-ay2425s2.github.io/website</code> (i.e., the base URL, without pointing to any specific page).<br/>
+    <strong>Reason:</strong> This base URL will take you to the schedule page of the current week automatically.</li>
+    <li><strong>[CS2103T Students]:</strong> Of the many weekly sessions that appear under CS2103T, only two actually belong to CS2103T. Those are, the lecture slot on Friday 1600-1800, and the 1-hour tutorial slot. The other 3-hour slots belong to the CS2101 course.<br/>
+    <strong>All CS2101 sessions start in week 1.</strong></li>
+  </ul>
+</div>
+
+<div style={{padding: '1rem', background: '#fff3cd', border: '1px solid #ffeaa7', borderRadius: '8px'}}>
+  <h3 style={{margin: '0 0 0.5rem 0'}}>[MUST-WATCH] Briefing Videos for Week 1</h3>
+  
+  <p>Before you do anything else please watch the following briefing videos in the order given. <strong>NUSNET login is required to access videos.</strong></p>
+  
+  <div style={{padding: '0.5rem', background: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '4px', marginBottom: '0.5rem', fontSize: '0.9rem'}}>
+    <strong>🅿️ Watching course briefing videos counts for participation.</strong><br/>
+    When watching a briefing video for the first time, avoid scrubbing or jumping ahead/around in the video timeline, as this can interfere with the video platform's capturing of what part of the video you actually watched. However, watching at faster speeds is fine.
+  </div>
+
+  <div style={{padding: '0.5rem', background: '#e8f5e9', border: '1px solid #c8e6c9', borderRadius: '4px', marginBottom: '1rem', fontSize: '0.9rem'}}>
+    <strong>📝 We have added closed captioning support for course briefing videos.</strong>
+  </div>
+  
+  <ol style={{marginBottom: 0}}>
+    <li>
+      <strong>Welcome to the Course:</strong><br/>
+      <span style={{background: '#6c757d', color: 'white', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.8rem'}}>🎬 Video 1 min</span>
+    </li>
+    <li>
+      <strong>Course Goals:</strong> How the goals of this course shape its structure (possibly different from other courses), and how it should be approached by students.<br/>
+      <span style={{background: '#6c757d', color: 'white', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.8rem'}}>🎬 Video 9 mins</span>
+    </li>
+    <li>
+      <strong>Week 1 Briefing:</strong> As this is the first weekly briefing, it also covers some general points relevant to all future weeks.<br/>
+      <span style={{background: '#6c757d', color: 'white', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.8rem'}}>🎬 Video 4 mins</span>
+    </li>
+  </ol>
+</div>
+
+<div style={{marginTop: '2rem'}}>
+  <h3 style={{marginBottom: '1rem'}}>Topics:</h3>
+  <div style={{background: '#f8f9fa', padding: '1rem', borderRadius: '8px'}}>
+    <ul style={{margin: 0, paddingLeft: '1.5rem'}}>
+      <li>[W1.1] OOP: Classes & Objects</li>
+      <li>[W1.2] OOP Inheritance</li>
+      <li>[W1.3] OOP: Polymorphism</li>
+      <li>[W1.4] Java: Collections</li>
+      <li>[W1.5] Exception Handling</li>
+    </ul>
+  </div>
+</div>
+
+<div style={{marginTop: '1.5rem'}}>
+  <h3 style={{marginBottom: '1rem'}}>Admin:</h3>
+  <div style={{background: '#f8f9fa', padding: '1rem', borderRadius: '8px'}}>
+    <ul style={{margin: 0, paddingLeft: '1.5rem'}}>
+      <li>Submit the pre-course survey <span style={{background: '#dc3545', color: 'white', padding: '0.1rem 0.4rem', borderRadius: '3px', fontSize: '0.85rem'}}>⏰ Fri, Jan 17th 2359</span></li>
+      <li>Learn about the course</li>
+      <li>Submit prereq topics quiz <span style={{background: '#dc3545', color: 'white', padding: '0.1rem 0.4rem', borderRadius: '3px', fontSize: '0.85rem'}}>⏰ Mon, Jan 20th 2359</span></li>
+      <li>Set up the tools <span style={{background: '#dc3545', color: 'white', padding: '0.1rem 0.4rem', borderRadius: '3px', fontSize: '0.85rem'}}>⏰ Fri, Jan 17th</span></li>
+      <li>[Optional] Follow the Git learning trail</li>
+    </ul>
+  </div>
+</div>
+
+  </TabItem>
+  <TabItem label="ℹ️ Admin">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p>This is the <strong>Admin</strong> tab of this week. It contains admin info relevant to this week.</p>
+  <p style={{marginBottom: 0}}>A label with the ⏰ icon indicates the deadline for that task (e.g., <span style={{background: '#6c757d', color: 'white', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.9rem'}}>⏰ Friday 2359</span>).</p>
+</div>
+
+### 1️⃣ Submit the pre-course survey <span style={{background: '#dc3545', color: 'white', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.9rem'}}>⏰ Fri, Jan 17th 2359</span> 🅿️
+
+Submit the pre-course survey (**compulsory** because it collects some important information about you e.g., your GitHub username.) -- will be open on Canvas, by Week 1 Monday.
+
+### 2️⃣ Learn about the course
+
+<div style={{padding: '0.5rem', background: '#e8f5e9', border: '1px solid #c8e6c9', borderRadius: '4px', marginBottom: '1rem', fontSize: '0.9rem'}}>
+  <strong>💡 Tip:</strong> You can use the 🗂️ button in a panel to open it as a new tab (it can be expanded in-place too). This feature is available only for panels containing another full page of the website (i.e., not available if the panel contains an extract of a page).
+</div>
+
+Read the following admin info about the course.
+
+<details>
+<summary><strong>Admin → Using this website [essential info]</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**🗓️ The Weekly Schedule Page** is your main source of information for CS2103/T. You will need to refer to it weekly. For an overview of the full schedule, refer to the Full Timeline page.
+
+**⚠️ More details for the upcoming weeks will be added as the weeks progress.** In general, information given for more than 1 week into the future should be treated as tentative.
+
+#### Browser compatibility
+Most of this will work on most mainstream Browsers, although some pages might not work well in small-screen devices.
+
+#### Information layers
+We try to layer information so that readers have the freedom to omit less important layers if they wish to. Some 'layering' techniques used are explained below:
+
+* **More important information are in bold** or ==highlighted== while less important information are dimmed or in collapsed panels such as the one below.
+
+<details>
+<summary>Some less important info in a boarder-less panel</summary>
+Less important info here.
+</details>
+
+<details style={{border: '1px solid #dee2e6', borderRadius: '4px', padding: '0.5rem', marginBottom: '1rem'}}>
+<summary>Some less important info in a panel</summary>
+Less important info here.
+</details>
+
+* You can use the 🗂️ button in a panel to open it as a new tab (it can be expanded in-place too). This feature is available only for panels containing another full page of the website (i.e., not available if the panel contains an extract of a page).
+
+* **Tabs** indicate alternative content (e.g. video vs text). You can choose the one you like and ignore the other tabs.
+
+* **Dotted underlines** indicate tool tips (activated by hovering over it) and **dashed underlines** indicate modal windows (activated by clicking) containing additional information.
+
+* The **topic levels system** indicates the progression of contents from basic/relevant topics to advanced/less-relevant topics. Open the panel below to see more details of that system.
+
+<details>
+<summary><strong>Admin → Course Expectations → Topic Levels</strong></summary>
+
+#### Topic Levels
+
+We use a topic levels system to indicate the progression of course components. Start with things that are rated level-1 and progress to topics at higher levels. Things rated level-4 are optional.
+
+**Levels for lesson topics (and textbook sections):**
+
+* **Level-1 topics** ⭐ are essential to keep up with the course. We recommend you to learn these topics if you want to pass the course (i.e. up to a C grade).
+* **Level-2 topics** ⭐⭐ can get you up to a B+.
+* **Level-3 topics** ⭐⭐⭐ can get you up to an A.
+* **Level-4 topics** ⭐⭐⭐⭐ **OPTIONAL** can push you beyond the limits of the course, and help you get into a level above those who merely limit themselves to the topics of the course. They are not examinable.
+
+**Topics marked with two 🎯 icons** e.g., 🎯🎯 are relevant topics you are expected to have learned in prerequisite courses. They are given for reference, but are examinable. The number of 🎯 indicates the progression of prerequisite topics, similar to the topic levels system above i.e., level-1 prerequisite topics are the most basic and the most important. level-4 prerequisite topics can be ignored without affecting GPA.
+
+**Topic levels for other things e.g., admin info sections:**
+The course uses a similar topic levels system to indicate the importance of other info in this website. i.e., information rated as level-1 are the most essential. Info rated level-4 are non-essential and can be ignored without affecting your ability to follow the course.
+
+</details>
+
+#### Rewards for exceeding expectations
+This course deliberately avoids giving extra credit for exceeding the expected bars, in order to keep the workload manageable (of course, doing more will have their own rewards in terms of learning).
+
+</div>
+</details>
+
+Read more: [Admin → Course expectations and topic levels]
+
+<details>
+<summary><strong>Admin → Using this website [more info]</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+#### Conventions used
+
+**Shorthand headings**
+
+Meaning of some shortened headings:
+* **What** : the meaning of the concept in concern
+* **Why** : the motivation behind the concept in concern
+* **How** : the usage of the concept in concern
+* **When** : the pros and cons of the concept in concern, when to use the concept
+
+**Meaning of icons**
+* 💡 : additional info
+* ⚠️ : warning
+* ✅ : positive message
+* ❗ or ‼️ : important message
+* ❌ : error or danger to avoid
+* 💎 : tip
+* 📖 : definition or topic
+* 👍 : tangential info, can be ignored if not interested
+* 🏆 : learning outcomes
+* 📦 : examples
+* 🔗 : resources
+* 📝 : exercises
+* 🖨️ : printable version
+* 👀 : preview/more info
+* 🎬 : video
+* `>_` : a command to be run in a terminal
+* 📄 : textual description
+* 📎 : slides
+* `▶️` : output produced by running code
+* ❓ question without answer
+* ❔ question with answer
+
+* 📋 : tasks to do
+* 🎓 : lecture/briefing
+* ✏️ : tutorial
+* ⏰ : deadline
+
+#### Searching for keywords
+Use the search box in the top navigation bar to search for keywords in the website pages.
+
+#### Saving as PDF files
+Follow this guide @SE-EDU/guides.
+
+#### Printing Textbook Content
+Printer-friendly version (indicated by 🖨️ icon) have been provided for each chapter and the whole book.
+
+</div>
+</details>
+
+Also read:
+* [Admin → Weekly schedule]
+* [Admin → Course overview]
+
+### 3️⃣ Submit prereq topics quiz <span style={{background: '#dc3545', color: 'white', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.9rem'}}>⏰ Mon, Jan 20th 2359</span> 🅿️
+
+Read prerequisite [Topics](#topics) allocated for week 1. Submit Week 1 Quiz (aka prereq topics quiz) (on Canvas) to demonstrate your grasp of those topics.
+
+<div style={{padding: '0.5rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '4px', marginBottom: '1rem', fontSize: '0.9rem'}}>
+  This quiz counts for participation (as indicated by the 🅿️ icon above).
+</div>
+
+<details>
+<summary><strong>❓ FAQ: When can we see the quiz answers?</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+We don't usually release quiz answers. But you can query for the correct answer using the 'Practice mode' which becomes available after the quiz deadline. Follow the Canvas announcement for more info.
+
+</div>
+</details>
+
+<details>
+<summary><strong>Admin → Participation</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+To receive full **5 marks** allocated for participation, meet all three criteria A, B, and C.
+
+#### A. Earned more than half of weekly participation points in at least 10 weeks.
+
+**Ways you can earn weekly participation points:**
+
+* **Weekly quiz(es)**, if any:
+  * Quizzes open around the weekly briefing time and stay open until the next briefing starts. In some weeks, there will be two quizzes (because two smaller quiz is easier for you to manage than one big quiz).
+  * If multiple attempts are allowed, we take the best attempt, not the latest attempt.
+  * When awarding participation points for quizzes, we look for two conditions:
+    * **Condition 1:** submitted early i.e., within four days of the briefing i.e., briefing day (Friday) + four more days → Tuesday 23:59 (reason: to encourage learning the weekly topics before doing the weekly tasks)
+    * **Condition 2:** answered correctly i.e., least 70% of the answers are correct (reason: to discourage random answers)
+  * You earn:
+    * **3 points** if both conditions are satisfied.
+    * **2 points** if only one condition is satisfied.
+    * **1 point** if submitted but both conditions are unsatisfied.
+
+* **Other activities** related to the course (e.g., submitting a survey) can earn participation points too.
+  * Such participation-graded activities can be identified by the icon 🅿️.
+  * Each such activity earns 2 points unless specified otherwise.
+  * Refer the activity description for evaluation criteria.
+
+To satisfy condition A, you need to participate in at least 10 (out of 13) weeks of the semester.
+
+#### B. Received good peer evaluations
+
+**-1** for each professional conduct criterion in which you are rated low by team members. 'Rated low' is receiving multiple Below Average or Poor ratings.
+
+No penalty for scoring low on competency criteria.
+
+#### C. Sufficient tutorial attendance/participation
+
+**-1 mark** if participated in fewer than 7 tutorials. To consider as 'participated' in a tutorial, you need to show a sufficient level of participation (just attending is not enough).
+
+#### + Bonus Marks
+
+In addition, you can receive bonus marks in the following ways. Bonus marks can be used to top up your participation marks but only if your marks from the above falls below 5.
+
+* **[For briefing participation]** Participated in briefing activities (e.g., in polls/quizzes done during the briefing) in at least 10 briefings: **1 mark**
+* **[For in-video quizzes]** Answered in-video quizzes in at least 7 weeks: **1 mark**
+  * 📝 Starting from week 3, some pre-recorded videos in the Topics tab will contain in-video quizzes. Videos containing quizzes are labelled 🎬 Video Q+ (instead of the usual 🎬 Video)
+* **[For perfect peer ratings]** Received good ratings for all 10 peer evaluations criteria: **1 mark**
+* **[For helping classmates]** Was very helpful to classmates e.g., multiple helpful posts in forum: **1 mark**
+
+</div>
+</details>
+
+### 4️⃣ Set up the tools <span style={{background: '#dc3545', color: 'white', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.9rem'}}>⏰ Fri, Jan 17th</span>
+
+Follow the tool **Preparation** instructions given in the following panels.
+
+<details>
+<summary><strong>Admin → Programming Language</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+This course uses Java. It assumes you are familiar with Java basics.
+
+**We require you to use Java 11** (the Oracle version or the OpenJDK version) for all course work. It is your responsibility to ensure the code you write (and executables you produce) are compatible with that version of Java.
+
+</div>
+</details>
+
+Tool setup guides:
+* Git
+* GitHub  
+* Java
+* IntelliJ IDEA
+
+### 5️⃣ [Optional] Follow the Git learning trail
+
+If you have time to spare while waiting for the semester to start, and would like to get a headstart on learning Git and GitHub (used a lot in this course), you are welcome to follow the Git Learning Trail.
+
+Doing so is **totally optional**, as the same content will be covered during the subsequent weeks as well.
+
+<hr style={{margin: '2rem 0'}}/>
+
+#### + Other info relevant to this week:
+
+<details>
+<summary><strong>❓ FAQ: Where is everything?</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+The course website is your main source of information for the course. Most module-related information you need will be given here. In addition, we use:
+
+* **Canvas** for announcements, quizzes, submission of deliverables, grade queries
+* **GitHub** as the hosting and collaboration platform during the project (tutorials will also use GitHub)
+* **MS Teams** for Q&A, email-like communications
+* **IntelliJ IDEA** as the IDE for programming
+
+</div>
+</details>
+
+See also:
+* [Admin → tP: Forming Teams]
+* [Admin → Textbooks]
+* [Admin → Grade Breakdown]
+
+<details>
+<summary><strong>❓ FAQ: What are the differences between CS2103T and CS2103?</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+Same content, same assessments, same exam. Separate tutorials, separate grading. Unless specified otherwise, whatever is stated for one course applies to the other.
+
+</div>
+</details>
+
+<details>
+<summary><strong>❓ FAQ: What are the extra requirements to get an A+?</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+In CS2103/T, A+ is not given simply based on the final score. To get an A+ you should,
+
+* Score >= 90% (for CS2103) or >= 85% (for CS2103T) in the final score AND
+* Be considered technically competent by peers AND  
+* Be considered helpful by peers (peer evaluations will measure this)
+
+</div>
+</details>
+
+  </TabItem>
+  <TabItem label="📑 Topics">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p style={{marginBottom: 0}}>This is the <strong>📑 Topics</strong> tab of this week. It contains topics allocated to this week.</p>
+</div>
+
+<details>
+<summary><strong>📊 Detailed Table of Contents</strong></summary>
+
+**[W1.1] OOP: Classes & Objects**
+* [W1.1a] Paradigms → OOP → Introduction → What 🎯🎯
+* [W1.1b] Paradigms → OOP → Objects → What 🎯
+* [W1.1c] Paradigms → OOP → Objects → Objects as abstractions 🎯
+* [W1.1d] Paradigms → OOP → Objects → Encapsulation of objects 🎯
+* [W1.1e] Paradigms → OOP → Classes → What 🎯
+* [W1.1f] C++ to Java → Classes → Defining classes 🎯
+* [W1.1g] C++ to Java → Classes → Getters and setters 🎯
+* [W1.1h] Paradigms → OOP → Classes → Class-level members 🎯
+* [W1.1i] C++ to Java → Classes → Class-level members 🎯
+* [W1.1j] Paradigms → OOP → Classes → Enumerations 🎯🎯
+* [W1.1k] C++ to Java → Miscellaneous Topics → Enumerations 🎯🎯
+
+**[W1.2] OOP Inheritance**
+* [W1.2a] Paradigms → OOP → Inheritance → What 🎯🎯
+* [W1.2b] Paradigms → OOP → Inheritance → Overloading 🎯🎯
+* [W1.2c] Paradigms → OOP → Inheritance → Overriding 🎯🎯
+* [W1.2d] C++ to Java → Inheritance → Inheritance (Basics) 🎯🎯
+
+**[W1.3] OOP: Polymorphism**
+* [W1.3a] Paradigms → OOP → Polymorphism → What 🎯🎯
+* [W1.3b] C++ to Java → Inheritance → Polymorphism 🎯🎯
+* [W1.3c] Paradigms → OOP → Inheritance → Abstract classes and methods 🎯🎯
+* [W1.3d] C++ to Java → Inheritance → Abstract classes and methods 🎯🎯
+* [W1.3e] Paradigms → OOP → Inheritance → Interfaces 🎯🎯
+* [W1.3f] C++ to Java → Inheritance → Interfaces 🎯🎯
+* [W1.3g] Paradigms → OOP → Inheritance → Substitutability 🎯🎯🎯
+* [W1.3h] Paradigms → OOP → Inheritance → Dynamic and static binding 🎯🎯🎯
+* [W1.3i] Paradigms → OOP → Polymorphism → How 🎯🎯🎯
+
+**[W1.4] Java: Collections**
+* [W1.4a] C++ to Java → Collections → The collections framework 🎯🎯
+* [W1.4b] C++ to Java → Collections → The ArrayList class 🎯
+* [W1.4c] C++ to Java → Collections → The HashMap class 🎯🎯
+
+**[W1.5] Exception Handling**
+* [W1.5a] Implementation → Error Handling → Introduction → What 🎯🎯
+* [W1.5b] Implementation → Error Handling → Exceptions → What 🎯🎯
+* [W1.5c] C++ to Java → Exceptions → What are Exceptions? 🎯🎯
+* [W1.5d] Implementation → Error Handling → Exceptions → How 🎯🎯🎯
+* [W1.5e] C++ to Java → Exceptions → How to use Exceptions 🎯🎯
+* [W1.5f] Implementation → Error Handling → Exceptions → When 🎯🎯🎯
+
+</details>
+
+<div style={{padding: '1rem', background: '#fff3cd', border: '1px solid #ffeaa7', borderRadius: '8px', marginBottom: '2rem'}}>
+  <h4 style={{margin: '0 0 0.5rem 0'}}>📚 Guidance for the item(s) below:</h4>
+  <p style={{marginBottom: 0}}>
+    Given below are some OOP and Java <strong>prereq topics</strong> (icon 🎯 indicates prereq topics). Go through these topics to refresh your memory, and demonstrate your knowledge by submitting the <strong>Week 1 Quiz (aka prereq topics quiz)</strong> on Canvas.
+  </p>
+  <p style={{marginBottom: 0, marginTop: '0.5rem'}}>
+    FYI, the 🏆 icon indicates a learning outcome.
+  </p>
+</div>
+
+## [W1.1] OOP: Classes & Objects
+
+### W1.1a 🎯🎯 : Paradigms → OOP → Introduction → What
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can describe OOP at a higher level</span>
+</div>
+
+**Object-Oriented Programming (OOP)** is a _programming paradigm_. A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way.
+
+Programming languages have traditionally divided the world into two parts—data and operations on data. Data is static and immutable, except as the operations may change it. The procedures and functions that operate on data have no lasting state of their own; they're useful only in their ability to affect data.
+
+This division is, of course, grounded in the way computers work, so it's not one that you can easily ignore or push aside. Like the equally pervasive distinctions between matter and energy and between nouns and verbs, it forms the background against which you work. At some point, all programmers—even object-oriented programmers—must lay out the data structures that their programs will use and define the functions that will act on the data.
+
+With a procedural programming language like C, that's about all there is to it. The language may offer various kinds of support for organizing data and functions, but it won't divide the world any differently. Functions and data structures are the basic elements of design.
+
+Object-oriented programming doesn't so much dispute this view of the world as restructure it at a higher level. It groups operations and data into modular units called objects and lets you combine objects into structured networks to form a complete program. In an object-oriented programming language, objects and object interactions are the basic elements of design.
+
+<div style={{backgroundColor: '#e8f4f8', padding: '10px', margin: '10px 0', borderLeft: '4px solid #1e90ff'}}>
+-- Object-Oriented Programming with Objective-C, Apple
+</div>
+
+Some other examples of programming paradigms are:
+
+| Paradigm | Programming Languages |
+|----------|----------------------|
+| Procedural Programming paradigm | C |
+| Functional Programming paradigm | F#, Haskell, Scala |
+| Logic Programming paradigm | Prolog |
+
+Some programming languages support multiple paradigms.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended to) write procedural code. e.g. se-edu/addressbook-level1
+
+📦 JavaScript and Python support functional, procedural, and OOP programming.
+</div>
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details>
+<summary><strong>Statements about OOP</strong></summary>
+
+Which of the following statements about OOP are correct?
+
+- [ ] a. OOP is a programming paradigm
+- [ ] b. OOP guides us in how to structure the solution
+- [ ] c. OOP is mainly about how to use classes and objects
+- [ ] d. OOP is a programming language
+- [ ] e. OOP is meant to be a departure from the traditional view of programming
+
+<details>
+<summary>Answer</summary>
+
+- [x] a. OOP is a programming paradigm
+- [x] b. OOP guides us in how to structure the solution
+- [ ] c. OOP is mainly about how to use classes and objects (Explanation: Even if a program uses classes and objects, it could be a procedural program that uses classes and objects. Many OOP languages support procedural style programs.)
+- [ ] d. OOP is a programming language
+- [x] e. OOP is meant to be a departure from the traditional view of programming
+</details>
+</details>
+
+<details>
+<summary><strong>Procedural vs OOP</strong></summary>
+
+Rearrange the following pseudocode statements to reflect procedural and OOP approaches.
+
+**Procedural approach:**
+```
+currentOption = input()  
+if currentOption == "add task":
+   addTask()
+else if currentOption == "search tasks":
+   searchTasks()  
+else if currentOption == "list tasks":
+   listTasks()
+...
+```
+
+**OOP approach:**
+```
+currentOption = input()
+currentOption.execute()
+```
+
+<details>
+<summary>Explanation</summary>
+The procedural approach checks each option and calls corresponding functions. The OOP approach treats the option as an object that knows how to execute itself.
+</details>
+</details>
+
+</div>
+</details>
+
+### W1.1b 🎯 : Paradigms → OOP → Objects → What
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can describe how OOP relates to the real world</span>
+</div>
+
+An **object** in Object-Oriented Programming (OOP) has state and behavior, similar to objects in the real world.
+
+> Every object has both state (data) and behavior (operations on data). In that, they're not much different from ordinary physical objects. It's easy to see how a mechanical device, such as a pocket watch or a piano, embodies both state and behavior. But almost anything that's designed to do a job does, too. Even simple things with no moving parts such as an ordinary bottle combine state (how full the bottle is, whether or not it's open, how warm its contents are) with behavior (the ability to dispense its contents at various flow rates, to be opened or closed, to withstand high or low temperatures).
+>
+> It's this resemblance to real things that gives objects much of their power and appeal. They can not only model components of real systems, but equally as well fulfill assigned roles as components in software systems.
+
+<div style={{backgroundColor: '#e8f4f8', padding: '10px', margin: '10px 0', borderLeft: '4px solid #1e90ff'}}>
+-- Object-Oriented Programming with Objective-C, Apple
+</div>
+
+OOP views the world as a network of interacting objects.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 **A real world scenario viewed as a network of interacting objects:**
+
+You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. You take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it into a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects `You`, `Pen`, `Paper`, `Calculator`, `Adam`, `Beth`, `Charlie`, and `Daisy` interacting to accomplish the end result of calculating the average age of the four persons. These objects can be considered as connected in a certain network of certain structure that dictates how these objects can interact. For example, `You` object is connected to the `Pen` object, and hence `You` can use the `Pen` object to write.
+</div>
+
+OOP solutions try to create a similar object network inside the computer's memory – a sort of virtual simulation of the corresponding real world scenario – so that a similar result can be achieved programmatically.
+
+OOP does not demand that the virtual world object network follow the real world exactly.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Our previous example can be tweaked a bit as follows:
+- Use an object called `Main` to represent your role in the scenario.
+- As there is no physical writing involved, you can replace the `Pen` and `Paper` with an object called `AgeList` that is able to keep a list of ages.
+</div>
+
+Every object has both **state** (data) and **behavior** (operations on data).
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 The state and behavior of our running example are as follows:
+
+| Object | Real World? | Virtual World? | Example of State (i.e. Data) | Examples of Behavior (i.e. Operations) |
+|--------|-------------|----------------|------------------------------|---------------------------------------|
+| Adam | ✓ | ✓ | Name, Date of Birth | Calculate age based on birthday |
+| Pen | ✓ | - | Ink color, Amount of ink remaining | Write |
+| AgeList | - | ✓ | Recorded ages | Give the number of entries, Accept an entry to record |
+| Calculator | ✓ | ✓ | Numbers already entered | Calculate the sum, divide |
+| You/Main | ✓ | ✓ | Average age, Sum of ages | Use other objects to calculate |
+</div>
+
+Every object has an **interface** and an **implementation**.
+
+Every real world object has,
+- an interface through which other objects can interact with it, and,
+- an implementation that supports the interface but may not be accessible to the other object.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 The interface and implementation of some real-world objects in our example:
+
+- **Calculator**: the buttons and the display are part of the interface; circuits are part of the implementation.
+- **Adam**: In the context of our 'calculate average age' example,
+  - the interface of Adam consists of requests that Adam will respond to, e.g. "Give age to the nearest year, as at Jan 1st of this year" "State your name".
+  - the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.
+</div>
+
+Similarly, every object in the virtual world has an interface and an implementation.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 The interface and implementation of some virtual-world objects in our example:
+- **Adam**: the interface might have a method `getAge(Date asAt)`; the implementation of that method is not visible to other objects.
+</div>
+
+Objects interact by sending **messages**. Both real world and virtual world object interactions can be viewed as objects sending messages to each other. The message can result in the sender object receiving a response and/or the receiver object's state being changed. Furthermore, the result can vary based on which object received the message, even if the message is identical (see rows 1 and 2 in the example below).
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Same messages and responses from our running example:
+
+| World | Sender | Receiver | Message | Response | State Change |
+|-------|--------|----------|---------|----------|--------------|
+| Real | You | Adam | "What is your name?" | "Adam" | - |
+| Real | as above | Beth | as above | "Beth" | - |
+| Real | You | Pen | Put nib on paper and apply pressure | Makes a mark on your paper | Ink level goes down |
+| Virtual | Main | Calculator (current total is 50) | add(int i): int i = 23 | 73 | total = total + 23 |
+</div>
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details>
+<summary><strong>Describe objects in the given scenario</strong></summary>
+
+Consider the scenario of adding a stock item to a shopping cart in an online store. Describe the scenario in terms of OOP concepts.
+
+<details>
+<summary>Answer</summary>
+
+Objects involved: `Customer`, `ShoppingCart`, `StockItem`, `Store`
+
+Interactions:
+1. `Customer` sends message "add item to cart" to `ShoppingCart`
+2. `ShoppingCart` sends message "check availability" to `Store`
+3. `Store` responds with availability status
+4. If available, `ShoppingCart` adds `StockItem` (state change)
+5. `ShoppingCart` responds to `Customer` with success/failure
+
+State examples:
+- `ShoppingCart`: items list, total price
+- `StockItem`: name, price, quantity
+- `Store`: inventory levels
+
+Behavior examples:
+- `ShoppingCart`: addItem(), removeItem(), calculateTotal()
+- `Store`: checkAvailability(), updateInventory()
+</details>
+</details>
+
+</div>
+</details>
+
+### W1.1c 🎯 : Paradigms → OOP → Objects → Objects as abstractions
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain the abstraction aspect of OOP</span>
+</div>
+
+The concept of Objects in OOP is an **abstraction mechanism** because it allows us to abstract away the lower level details and work with bigger granularity entities i.e. ignore details of data formats and the method implementation details and work at the level of objects.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 You can deal with a `Person` object that represents the person Adam and query the object for Adam's age instead of dealing with details such as Adam's date of birth (DoB), in what format the DoB is stored, the algorithm used to calculate the age from the DoB, etc.
+</div>
+
+### W1.1d 🎯 : Paradigms → OOP → Objects → Encapsulation of objects
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain the encapsulation aspect of OOP</span>
+</div>
+
+> Encapsulation protects an implementation from unintended actions and from inadvertent access.
+
+<div style={{backgroundColor: '#e8f4f8', padding: '10px', margin: '10px 0', borderLeft: '4px solid #1e90ff'}}>
+-- Object-Oriented Programming with Objective-C, Apple
+</div>
+
+An object is an encapsulation of some data and related behavior in terms of two aspects:
+
+**1. The packaging aspect:** An object packages data and related behavior together into one self-contained unit.
+
+**2. The information hiding aspect:** The data in an object is hidden from the outside world and are only accessible using the object's interface.
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details>
+<summary><strong>Choose the correct statement</strong></summary>
+
+Which of these statements about encapsulation are correct?
+
+- [ ] a. Encapsulation is the ability to hide data by limiting access to data from the outside world.
+- [ ] b. Encapsulation is the ability to treat different objects as one type.
+- [ ] c. Encapsulation is the ability to divide data into smaller packets.
+- [ ] d. Encapsulation is the ability to group data and behavior into one entity.
+
+<details>
+<summary>Answer</summary>
+
+- [x] a. Encapsulation is the ability to hide data by limiting access to data from the outside world. (This is information hiding aspect)
+- [ ] b. Encapsulation is the ability to treat different objects as one type. (This is polymorphism)
+- [ ] c. Encapsulation is the ability to divide data into smaller packets.
+- [x] d. Encapsulation is the ability to group data and behavior into one entity. (This is packaging aspect)
+</details>
+</details>
+
+</div>
+</details>
+
+### W1.1e 🎯 : Paradigms → OOP → Classes → What
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain the relationship between classes and objects</span>
+</div>
+
+Writing an OOP program is essentially writing instructions that the computer will use to,
+- create the virtual world of the object network, and
+- provide it the inputs to produce the outcome you want.
+
+A **class** contains instructions for creating a specific kind of objects. It turns out sometimes multiple objects keep the same type of data and have the same behavior because they are of the same kind. Instructions for creating a 'kind' (or 'class') of objects can be done once and those same instructions can be used to instantiate objects of that kind. We call such instructions a Class.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 **Classes and objects in an example scenario**
+
+Consider the example of writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy.
+
+Instructions for creating objects Adam, Beth, Charlie, and Daisy will be very similar because they are all of the same kind: they all represent 'persons' with the same interface, the same kind of data (i.e. name, dateOfBirth, etc.), and the same kind of behavior (i.e. getAge(Date), getName(), etc.). Therefore, you can have a class called `Person` containing instructions on how to create `Person` objects and use that class to instantiate objects Adam, Beth, Charlie, and Daisy.
+
+Similarly, you need classes `AgeList`, `Calculator`, and `Main` classes to instantiate one each of `AgeList`, `Calculator`, and `Main` objects.
+
+| Class | Objects |
+|-------|---------|
+| Person | objects representing Adam, Beth, Charlie, Daisy |
+| AgeList | an object to represent the age list |
+| Calculator | an object to do the calculations |
+| Main | an object to represent you (i.e., the one who manages the whole operation) |
+</div>
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details>
+<summary><strong>Identify Classes and Objects</strong></summary>
+
+Identify the classes and their objects for the following scenario:
+
+A customer visits an ATM machine to withdraw money. The ATM has a card reader that reads the customer's ATM card, a keypad for entering PIN and amount, a cash dispenser that gives out cash, and a display screen. The ATM is connected to the bank's system to verify account details and update the balance.
+
+<details>
+<summary>Answer</summary>
+
+Classes and their objects:
+
+| Class | Objects |
+|-------|---------|
+| Customer | A specific customer using the ATM |
+| ATMCard | The customer's specific ATM card |
+| ATM | The specific ATM machine being used |
+| CardReader | The card reader component of the ATM |
+| Keypad | The keypad component of the ATM |
+| CashDispenser | The cash dispenser component of the ATM |
+| Display | The display screen of the ATM |
+| BankSystem | The bank's central system |
+| Account | The customer's bank account |
+</details>
+</details>
+
+<details>
+<summary><strong>Classes for CityConnect app</strong></summary>
+
+A software application called CityConnect consists of four types of entities: Person, Admin, Contact, and Message. 
+- Admin is a type of Person who can ban other persons.
+- A Contact contains the contact info of a Person.
+- A Message can be sent by a Person to another Person.
+
+Draw a class diagram for CityConnect.
+
+<details>
+<summary>Answer</summary>
+
+Classes needed:
+1. `Person` - base class
+2. `Admin` - inherits from Person
+3. `Contact` - associated with Person
+4. `Message` - associated with Person (sender and receiver)
+
+Relationships:
+- Admin IS-A Person (inheritance)
+- Person HAS-A Contact (association)
+- Message is sent by Person to Person (associations)
+</details>
+</details>
+
+</div>
+</details>
+
+### W1.1f 🎯 : C++ to Java → Classes → Defining classes
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can define Java classes</span>
+</div>
+
+As you know,
+- Defining a class introduces a new object type.
+- Every object belongs to some object type; that is, it is an instance of some class.
+- A class definition is like a template for objects: it specifies what attributes the objects have and what methods they have.
+- The `new` operator instantiates objects, that is, it creates new instances of a class.
+- The methods that operate on an object type are defined in the class for that object.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Here's a class called `Time`, intended to represent a moment in time. It has three attributes and no methods.
+
+```java
+public class Time {
+    private int hour;
+    private int minute;
+    private int second;
+}
+```
+</div>
+
+You can give a class any name you like. The Java convention is to use **PascalCase** format for class names.
+
+The code is usually placed in a file whose name matches the class e.g., the `Time` class should be in a file named `Time.java`.
+
+When a class is `public` (e.g., the `Time` class in the above example) it can be used in other classes. But the instance variables that are `private` (e.g., the `hour`, `minute` and `second` attributes of the `Time` class) can only be accessed from inside the `Time` class.
+
+#### Constructors
+
+The syntax for constructors is similar to that of other methods, except:
+- The name of the constructor is the same as the name of the class.
+- The keyword `static` is omitted.
+- Does not return anything. A constructor returns the created object by default.
+
+When you invoke `new`, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, it returns a reference to the new object.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Here is an example constructor for the `Time` class:
+
+```java
+public Time() {
+    hour = 0;
+    minute = 0;
+    second = 0;
+}
+```
+
+This constructor does not take any arguments. Each line initializes an instance variable to 0 (which in this example means midnight). Now you can create `Time` objects.
+
+```java
+Time time = new Time();
+```
+</div>
+
+Like other methods, constructors can be **overloaded**.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 You can add another constructor to the `Time` class to allow creating `Time` objects that are initialized to a specific time:
+
+```java
+public Time(int h, int m, int s) {
+    hour = h;
+    minute = m;
+    second = s;
+}
+```
+
+Here's how you can invoke the new constructor: `Time justBeforeMidnight = new Time(11, 59, 59);`
+</div>
+
+#### `this` keyword
+
+The `this` keyword is a reference variable in Java that refers to the current object. You can use `this` the same way you use the name of any other object. For example, you can read and write the instance variables of `this`, and you can pass `this` as an argument to other methods. But you do not declare `this`, and you can't make an assignment to it.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 In the following version of the constructor, the names and types of the parameters are the same as the instance variables (parameters don't have to use the same names, but that's a common style). As a result, the parameters shadow (or hide) the instance variables, so the keyword `this` is necessary to tell them apart.
+
+```java
+public Time(int hour, int minute, int second) {
+    this.hour = hour;
+    this.minute = minute;
+    this.second = second;
+}
+```
+</div>
+
+`this` can be used to refer to a constructor of a class within the same class too.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 In this example the constructor `Time()` uses the `this` keyword to call its own overloaded constructor `Time(int, int, int)`
+
+```java
+public Time() {
+    this(0, 0, 0); // call the overloaded constructor
+}
+
+public Time(int hour, int minute, int second) {
+    // ...
+}
+```
+</div>
+
+#### Instance methods
+
+You can add methods to a class which can then be used from the objects of that class. These instance methods do not have the `static` keyword in their method signature. Instance methods can access attributes of the class.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Here's how you can add a method to the `Time` class to get the number of seconds passed since midnight.
+
+```java
+public int secondsSinceMidnight() {
+    return hour*60*60 + minute*60 + second;
+}
+```
+
+Here's how you can use that method.
+
+```java
+Time t = new Time(0, 2, 5);
+System.out.println(t.secondsSinceMidnight() + " seconds since midnight!");
+```
+</div>
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details style={{border: '1px solid #2196F3', borderRadius: '5px', padding: '10px', backgroundColor: '#E3F2FD'}}>
+<summary><strong>[Key Exercise] define a Circle class</strong></summary>
+
+Define a `Circle` class so that the code given below produces the given output. The nature of the class is as follows:
+
+**Attributes** (all `private`):
+- `int x`, `int y`: represents the location of the circle
+- `double radius`: the radius of the circle
+
+**Constructors**:
+- `Circle()`: initializes x, y, radius to 0
+- `Circle(int x, int y, double radius)`: initializes the attributes to the given values
+
+**Methods**:
+- `getArea(): int`
+  - Returns the area of the circle as an `int` value (not `double`). Calculated as Pi * (radius)²
+  - 💡 You can convert a double to an int using `(int)` e.g., `x = (int)2.25` gives `x` the value `2`.
+  - 💡 You can use `Math.PI` to get the value of Pi
+  - 💡 You can use `Math.pow()` to raise a number to a specific power e.g., `Math.pow(3, 2)` calculates 3²
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle();
+
+        System.out.println(c.getArea());
+        c = new Circle(1, 2, 5);
+        System.out.println(c.getArea());
+
+    }
+}
+```
+
+Expected output:
+```
+0
+78
+```
+
+<details>
+<summary>💡 Hint</summary>
+
+Structure your class like this:
+```java
+public class Circle {
+    // Declare attributes
+    
+    // Constructor 1
+    
+    // Constructor 2
+    
+    // getArea method
+}
+```
+</details>
+
+<details>
+<summary>Answer</summary>
+
+```java
+public class Circle {
+    private int x;
+    private int y;
+    private double radius;
+    
+    public Circle() {
+        x = 0;
+        y = 0;
+        radius = 0;
+    }
+    
+    public Circle(int x, int y, double radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+    
+    public int getArea() {
+        double area = Math.PI * Math.pow(radius, 2);
+        return (int) area;
+    }
+}
+```
+</details>
+</details>
+
+</div>
+</details>
+
+### W1.1g 🎯 : C++ to Java → Classes → Getters and setters
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can define getters and setters</span>
+</div>
+
+As the instance variables of `Time` are `private`, you can access them from within the `Time` class only. To compensate, you can provide methods to access attributes:
+
+```java
+public int getHour() {
+    return hour;
+}
+
+public int getMinute() {
+    return minute;
+}
+
+public int getSecond() {
+    return second;
+}
+```
+
+Methods like these are formally called "accessors", but more commonly referred to as **getters**. By convention, the method that gets a variable named `something` is called `getSomething`.
+
+Similarly, you can provide **setter** methods to modify attributes of a `Time` object:
+
+```java
+public void setHour(int hour) {
+    this.hour = hour;
+}
+
+public void setMinute(int minute) {
+    this.minute = minute;
+}
+
+public void setSecond(int second) {
+    this.second = second;
+}
+```
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details style={{border: '1px solid #2196F3', borderRadius: '5px', padding: '10px', backgroundColor: '#E3F2FD'}}>
+<summary><strong>[Key Exercise] add getters/setters to the Circle class</strong></summary>
+
+Consider the Circle class below:
+
+```java
+public class Circle {
+    private int x;
+    private int y;
+    private double radius;
+
+    public Circle(){
+        this(0, 0, 0);
+    }
+
+    public Circle(int x, int y, double radius){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+
+    public int getArea(){
+        double area = Math.PI * Math.pow(radius, 2);
+        return (int)area;
+    }
+
+}
+```
+
+Update it as follows so that code given below produces the given output.
+
+1. Add getter/setter methods for all three attributes
+2. Update the setters and constructors such that if the radius supplied is negative, the code automatically set the radius to 0 instead.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle(1,2, 5);
+
+        c.setX(4);
+        c.setY(5);
+        c.setRadius(6);
+        System.out.println("x      : " + c.getX());
+        System.out.println("y      : " + c.getY());
+        System.out.println("radius : " + c.getRadius());
+        System.out.println("area   : " + c.getArea());
+
+        c.setRadius(-5);
+        System.out.println("radius : " + c.getRadius());
+        c = new Circle(1, 1, -4);
+        System.out.println("radius : " + c.getRadius());
+
+    }
+}
+```
+
+Expected output:
+```
+x      : 4
+y      : 5
+radius : 6.0
+area   : 113
+radius : 0.0
+radius : 0.0
+```
+
+<details>
+<summary>💡 Hint</summary>
+
+Remember:
+- Getter methods should return the value of the attribute
+- Setter methods should set the value of the attribute
+- Use `Math.max(0, radius)` or an if statement to ensure radius is never negative
+</details>
+
+<details>
+<summary>Answer</summary>
+
+```java
+public class Circle {
+    private int x;
+    private int y;
+    private double radius;
+
+    public Circle(){
+        this(0, 0, 0);
+    }
+
+    public Circle(int x, int y, double radius){
+        this.x = x;
+        this.y = y;
+        setRadius(radius); // Use setter to apply validation
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = Math.max(0, radius);
+        // Alternative: this.radius = radius < 0 ? 0 : radius;
+    }
+
+    public int getArea(){
+        double area = Math.PI * Math.pow(radius, 2);
+        return (int)area;
+    }
+}
+```
+</details>
+</details>
+
+</div>
+</details>
+
+### W1.1h 🎯 : Paradigms → OOP → Classes → Class-level members
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain class-level members</span>
+</div>
+
+While all objects of a class have the same attributes, each object has its own copy of the attribute value.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 All `Person` objects have the `name` attribute but the value of that attribute varies between `Person` objects.
+</div>
+
+However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like 'global variables' but attached to a specific class. Such variables whose value is shared by all instances of a class are called **class-level attributes**.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 The attribute `totalPersons` should be maintained centrally and shared by all `Person` objects rather than copied at each `Person` object.
+</div>
+
+Similarly, when a normal method is being called, a message is being sent to the receiving object and the result may depend on the receiving object.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Sending the `getName()` message to the `Adam` object results in the response `"Adam"` while sending the same message to the `Beth` object results in the response `"Beth"`.
+</div>
+
+However, there can be methods related to a specific class but not suitable for sending messages to a specific object of that class. Such methods that are called using the class instead of a specific instance are called **class-level methods**.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 The method `getTotalPersons()` is not suitable to send to a specific `Person` object because a specific object of the `Person` class should not have to know about the total number of `Person` objects.
+</div>
+
+Class-level attributes and methods are collectively called **class-level members** (also called **static members** sometimes because some programming languages use the keyword `static` to identify class-level members). They are to be accessed using the class name rather than an instance of the class.
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details>
+<summary><strong>Suitable as class-level variables</strong></summary>
+
+Which of these are suitable as class-level variables?
+
+- [ ] a. system: multi-player Pac Man game, Class: `Ghost`, variable: `currentLocation`
+- [ ] b. system: FaceBook, Class: `User`, variable: `lastLogin`
+- [ ] c. system: a modeling software, Class: `Model`, variable: `totalModels`
+- [ ] d. system: a virtual pet game, Class: `Pet`, variable: `name`
+- [ ] e. system: a student records system, Class: `Student`, variable: `studentCount`
+
+<details>
+<summary>Answer</summary>
+
+- [ ] a. `currentLocation` is specific to each Ghost object
+- [ ] b. `lastLogin` is specific to each User
+- [x] c. `totalModels` should be shared by all Model objects
+- [ ] d. `name` is specific to each Pet
+- [x] e. `studentCount` should be shared by all Student objects
+
+Explanation: Variables that represent counts, totals, or other aggregate information about all objects of a class are suitable as class-level variables.
+</details>
+</details>
+
+</div>
+</details>
+
+### W1.1i 🎯 : C++ to Java → Classes → Class-level members
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can use class-level members</span>
+</div>
+
+The content below is an extract from -- Java Tutorial, with slight adaptations.
+
+When a number of objects are created from the same class blueprint, they each have their own distinct copies of instance variables. In the case of a `Bicycle` class, the instance variables are `gear`, and `speed`. Each `Bicycle` object has its own values for these variables, stored in different memory locations.
+
+Sometimes, you want to have variables that are common to all objects. This is accomplished with the `static` modifier. Fields that have the `static` modifier in their declaration are called **static fields** or **class variables**. They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory. Any object can change the value of a class variable, but class variables can also be manipulated without creating an instance of the class.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Suppose you want to create a number of `Bicycle` objects and assign each a serial number, beginning with 1 for the first object. This ID number is unique to each object and is therefore an instance variable. At the same time, you need a field to keep track of how many `Bicycle` objects have been created so that you know what ID to assign to the next one. Such a field is not related to any individual object, but to the class as a whole. For this you need a class variable, `numberOfBicycles`, as follows:
+
+```java
+public class Bicycle {
+
+    private int gear;
+    private int speed;
+
+    // an instance variable for the object ID
+    private int id;
+
+    // a class variable for the number of Bicycle
+    //   objects instantiated
+    private static int numberOfBicycles = 0;
+        ...
+}
+```
+</div>
+
+Class variables are referenced by the class name itself, as in `Bicycle.numberOfBicycles` This makes it clear that they are class variables.
+
+The Java programming language supports **static methods** as well as static variables. Static methods, which have the `static` modifier in their declarations, should be invoked with the class name, without the need for creating an instance of the class, as in `ClassName.methodName(args)`
+
+The `static` modifier, in combination with the `final` modifier, is also used to define constants. The `final` modifier indicates that the value of this field cannot change. For example, the following variable declaration defines a constant named `PI`, whose value is an approximation of pi (the ratio of the circumference of a circle to its diameter): `static final double PI = 3.141592653589793;`
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Here is an example with class-level variables and class-level methods:
+
+```java
+public class Bicycle {
+
+    private int gear;
+    private int speed;
+
+    private int id;
+
+    private static int numberOfBicycles = 0;
+
+
+    public Bicycle(int startSpeed, int startGear) {
+        gear = startGear;
+        speed = startSpeed;
+
+        numberOfBicycles++;
+        id = numberOfBicycles;
+    }
+
+    public int getID() {
+        return id;
+    }
+
+    public static int getNumberOfBicycles() {
+        return numberOfBicycles;
+    }
+
+    public int getGear(){
+        return gear;
+    }
+
+    public void setGear(int newValue) {
+        gear = newValue;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    // ...
+
+}
+```
+
+📦 Explanation of `System.out.println(...)`:
+- `out` is a class-level public attribute of the `System` class.
+- `println` is an instance level method of the `out` object.
+</div>
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details style={{border: '1px solid #2196F3', borderRadius: '5px', padding: '10px', backgroundColor: '#E3F2FD'}}>
+<summary><strong>[Key Exercise] add getMaxRadius to the Circle class</strong></summary>
+
+Consider the Circle class below:
+
+```java
+public class Circle {
+    private int x;
+    private int y;
+    private double radius;
+
+    public Circle(){
+        this(0, 0, 0);
+    }
+
+    public Circle(int x, int y, double radius){
+        setX(x);
+        setY(y);
+        setRadius(radius);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = Math.max(radius, 0);
+    }
+
+    //TODO: Add your getMaxRadius() method here
+}
+```
+
+Update it as follows so that code given below produces the given output.
+
+1. Add a class-level `maxRadius` variable to store the maximum radius value of the Circle objects in existence thus far.
+2. Add a class-level `getMaxRadius()` method that uses the above-mentioned variable to return the maximum radius value of the Circle objects in existence thus far.
+3. Remember to update the `setRadius` method to ensure `maxRadius` value is updated (if needed) when the radius of an existing Circle object is changed.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        System.out.println("max radius used so far : " + Circle.getMaxRadius());
+        c = new Circle(0, 0, 10);
+        System.out.println("max radius used so far : " + Circle.getMaxRadius());
+        c = new Circle(0, 0, -15);
+        System.out.println("max radius used so far : " + Circle.getMaxRadius());
+        c.setRadius(12);
+        System.out.println("max radius used so far : " + Circle.getMaxRadius());
+    }
+}
+```
+
+Expected output:
+```
+max radius used so far : 0.0
+max radius used so far : 10.0
+max radius used so far : 10.0
+max radius used so far : 12.0
+```
+
+<details>
+<summary>💡 Hint</summary>
+
+- Use `static double maxRadius = 0;` to declare the class variable
+- Use `public static double getMaxRadius() { return maxRadius; }` for the getter
+- Update `maxRadius` in both the constructor and `setRadius` method using `Math.max(maxRadius, radius)`
+</details>
+
+<details>
+<summary>Answer</summary>
+
+```java
+public class Circle {
+    private int x;
+    private int y;
+    private double radius;
+    
+    // Class-level variable to track maximum radius
+    private static double maxRadius = 0;
+
+    public Circle(){
+        this(0, 0, 0);
+    }
+
+    public Circle(int x, int y, double radius){
+        setX(x);
+        setY(y);
+        setRadius(radius);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = Math.max(radius, 0);
+        // Update maxRadius if current radius is larger
+        maxRadius = Math.max(maxRadius, this.radius);
+    }
+    
+    public static double getMaxRadius() {
+        return maxRadius;
+    }
+}
+```
+</details>
+</details>
+
+</div>
+</details>
+
+### W1.1j 🎯🎯 : Paradigms → OOP → Classes → Enumerations
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain the meaning of enumerations</span>
+</div>
+
+An **Enumeration** is a fixed set of values that can be considered as a data type. An enumeration is often useful when using a regular data type such as `int` or `String` would allow invalid values to be assigned to a variable.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Suppose you want a variable called `priority` to store the priority of something. There are only three priority levels: high, medium, and low. You can declare the variable `priority` as of type `int` and use only values 2, 1, and 0 to indicate the three priority levels. However, this opens the possibility of an invalid value such as 9 being assigned to it. But if you define an enumeration type called `Priority` that has three values `HIGH`, `MEDIUM` and `LOW` only, a variable of type `Priority` will never be assigned an invalid value because the compiler is able to catch such an error.
+
+`Priority: HIGH, MEDIUM, LOW`
+</div>
+
+### W1.1k 🎯🎯 : C++ to Java → Miscellaneous Topics → Enumerations
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can use Java enumerations</span>
+</div>
+
+You can define an enum type by using the `enum` keyword. Because they are constants, the names of an enum type's fields are in uppercase letters e.g., `FLAG_SUCCESS` by convention.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Defining an enumeration to represent days of a week (code to be put in the `Day.java` file):
+
+```java
+public enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY
+}
+```
+</div>
+
+Some examples of using the `Day` enumeration defined above:
+
+```java
+Day today = Day.MONDAY;
+Day[] holidays = new Day[]{Day.SATURDAY, Day.SUNDAY};
+
+switch (today) {
+case SATURDAY:
+case SUNDAY:
+    System.out.println("It's the weekend");
+    break;
+default:
+    System.out.println("It's a week day");
+}
+```
+
+Note that while enumerations are usually a simple set of fixed values, Java enumerations can have behaviors too, as explained in this tutorial from -- Java Tutorial
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details style={{border: '1px solid #2196F3', borderRadius: '5px', padding: '10px', backgroundColor: '#E3F2FD'}}>
+<summary><strong>[Key Exercise] show priority color</strong></summary>
+
+Define an enumeration named `Priority`. Add the missing `describe` method to the code below so that it produces the output given.
+
+```java
+public class Main {
+
+    // Add your method here
+
+    public static void main(String[] args) {
+        describe("Red", Priority.HIGH);
+        describe("Orange", Priority.MEDIUM);
+        describe("Blue", Priority.MEDIUM);
+        describe("Green", Priority.LOW);
+    }
+}
+```
+
+Expected output:
+```
+Red indicates high priority
+Orange indicates medium priority
+Blue indicates medium priority
+Green indicates low priority
+```
+
+<details>
+<summary>💡 Hint</summary>
+
+- First define the `Priority` enum with values `HIGH`, `MEDIUM`, `LOW`
+- Then create a `describe` method that takes a String and a Priority parameter
+- Use a switch statement or if-else to handle different priority values
+</details>
+
+<details>
+<summary>Answer</summary>
+
+```java
+enum Priority {
+    HIGH, MEDIUM, LOW
+}
+
+public class Main {
+
+    public static void describe(String color, Priority priority) {
+        String level;
+        switch (priority) {
+            case HIGH:
+                level = "high";
+                break;
+            case MEDIUM:
+                level = "medium";
+                break;
+            case LOW:
+                level = "low";
+                break;
+            default:
+                level = "unknown";
+        }
+        System.out.println(color + " indicates " + level + " priority");
+    }
+
+    public static void main(String[] args) {
+        describe("Red", Priority.HIGH);
+        describe("Orange", Priority.MEDIUM);
+        describe("Blue", Priority.MEDIUM);
+        describe("Green", Priority.LOW);
+    }
+}
+```
+</details>
+</details>
+
+</div>
+</details>
+
+## [W1.2] OOP Inheritance
+
+### W1.2a 🎯🎯 : Paradigms → OOP → Inheritance → What
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain the meaning of inheritance</span>
+</div>
+
+The OOP concept **Inheritance** allows you to define a new class based on an existing class.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 For example, you can use inheritance to define an `EvaluationReport` class based on an existing `Report` class so that the `EvaluationReport` class does not have to duplicate data/behaviors that are already implemented in the `Report` class. The `EvaluationReport` can inherit the `wordCount` attribute and the `print()` method from the base class `Report`.
+</div>
+
+**Other names for Base class:** Parent class, Superclass  
+**Other names for Derived class:** Child class, Subclass, Extended class
+
+A **superclass** is said to be more general than the subclass. Conversely, a **subclass** is said to be more specialized than the superclass.
+
+Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 `Man` and `Woman` behave the same way for certain things. However, the two classes cannot be simply replaced with a more general class `Person` because of the need to distinguish between `Man` and `Woman` for certain other things. A solution is to add the `Person` class as a superclass (to contain the code common to men and women) and let `Man` and `Woman` inherit from `Person` class.
+</div>
+
+Inheritance implies the derived class can be considered as a subtype of the base class (and the base class is a super-type of the derived class), resulting in an **is a** relationship.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 To continue the previous example,
+- `Woman` is a `Person`
+- `Man` is a `Person`
+</div>
+
+Inheritance relationships through a chain of classes can result in **inheritance hierarchies** (aka inheritance trees).
+
+**Multiple Inheritance** is when a class inherits directly from multiple classes. Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java, C#).
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 The `Honey` class inherits from the `Food` class and the `Medicine` class because honey can be consumed as a food as well as a medicine (in some oriental medicine practices). Similarly, a `Car` is a `Vehicle`, an `Asset` and a `Liability`.
+</div>
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details>
+<summary><strong>Which statements are correct?</strong></summary>
+
+Which of the following statements about inheritance are correct?
+
+- [ ] a. Inheritance allows a class to inherit from another class.
+- [ ] b. Inheritance is an is-a relationship.
+- [ ] c. A subclass can inherit from multiple superclasses in Java.
+- [ ] d. A superclass is more general than its subclasses.
+- [ ] e. The terms superclass and parent class mean the same thing.
+
+<details>
+<summary>Answer</summary>
+
+- [x] a. Inheritance allows a class to inherit from another class.
+- [x] b. Inheritance is an is-a relationship.
+- [ ] c. A subclass can inherit from multiple superclasses in Java. (False: Java doesn't support multiple inheritance for classes)
+- [x] d. A superclass is more general than its subclasses.
+- [x] e. The terms superclass and parent class mean the same thing.
+</details>
+</details>
+
+</div>
+</details>
+
+### W1.2b 🎯🎯 : Paradigms → OOP → Inheritance → Overloading
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain method overloading</span>
+</div>
+
+**Method overloading** is when there are multiple methods with the same name but different type signatures. Overloading is used to indicate that multiple operations do similar things but take different parameters.
+
+**Type signature:** The type signature of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Example:
+
+| Method | Type Signature |
+|--------|----------------|
+| `int add(int X, int Y)` | `(int, int)` |
+| `void add(int A, int B)` | `(int, int)` |
+| `void m(int X, double Y)` | `(int, double)` |
+| `void m(double X, int Y)` | `(double, int)` |
+</div>
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 In the case below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int)`.
+
+```java
+calculate(String): void
+calculate(int): void
+```
+</div>
+
+### W1.2c 🎯🎯 : Paradigms → OOP → Inheritance → Overriding
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain method overriding</span>
+</div>
+
+**Method overriding** is when a subclass changes the behavior inherited from the parent class by re-implementing the method. Overridden methods have the same name, the same type signature, and the same (or a subtype of the) return type.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Consider the following case of `EvaluationReport` class inheriting the `Report` class:
+
+| Report methods | EvaluationReport methods | Overrides? |
+|----------------|-------------------------|------------|
+| `print()` | `print()` | **Yes** |
+| `write(String)` | `write(String)` | **Yes** |
+| `read():String` | `read(int):String` | **No.** Reason: the two methods have different signatures; This is a case of overloading (rather than overriding). |
+</div>
+
+### W1.2d 🎯🎯 : C++ to Java → Inheritance → Inheritance (Basics)
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can use basic inheritance</span>
+</div>
+
+Given below is an extract from the -- Java Tutorial, with slight adaptations.
+
+A class that is derived from another class is called a **subclass** (also a derived class, extended class, or child class). The class from which the subclass is derived is called a **superclass** (also a base class or a parent class).
+
+A subclass inherits all the members (fields, methods, and nested classes) from its superclass. Constructors are not members, so they are not inherited by subclasses, but the constructor of the superclass can be invoked from the subclass.
+
+Every class has one and only one direct superclass (**single inheritance**), except the `Object` class, which has no superclass. In the absence of any other explicit superclass, every class is implicitly a subclass of `Object`. Classes can be derived from classes that are derived from classes that are derived from classes, and so on, and ultimately derived from the topmost class, `Object`. Such a class is said to be descended from all the classes in the inheritance chain stretching back to `Object`. Java does not support multiple inheritance among classes.
+
+The `java.lang.Object` class defines and implements behavior common to all classes—including the ones that you write. In the Java platform, many classes derive directly from `Object`, other classes derive from some of those classes, and so on, forming a single hierarchy of classes.
+
+The keyword `extends` indicates one class inheriting from another.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Here is the sample code for a possible implementation of a `Bicycle` class and a `MountainBike` class that is a subclass of the `Bicycle`:
+
+```java
+public class Bicycle {
+
+    public int gear;
+    public int speed;
+
+    public Bicycle(int startSpeed, int startGear) {
+        gear = startGear;
+        speed = startSpeed;
+    }
+
+    public void setGear(int newValue) {
+        gear = newValue;
+    }
+
+    public void applyBrake(int decrement) {
+        speed -= decrement;
+    }
+
+    public void speedUp(int increment) {
+        speed += increment;
+    }
+
+}
+```
+
+```java
+public class MountainBike extends Bicycle {
+
+    // the MountainBike subclass adds one field
+    public int seatHeight;
+
+    // the MountainBike subclass has one constructor
+    public MountainBike(int startHeight, int startSpeed, int startGear) {
+        super(startSpeed, startGear);
+        seatHeight = startHeight;
+    }
+
+    // the MountainBike subclass adds one method
+    public void setHeight(int newValue) {
+        seatHeight = newValue;
+    }
+}
+```
+</div>
+
+A subclass inherits all the fields and methods of the superclass. In the example above, `MountainBike` inherits all the fields and methods of `Bicycle` and adds the field `seatHeight` and a method to set it.
+
+#### Accessing superclass members
+
+If your method overrides one of its superclass's methods, you can invoke the overridden method through the use of the keyword `super`. You can also use `super` to refer to a hidden field (although hiding fields is discouraged).
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Consider this class, `Superclass` and a subclass, called `Subclass`, that overrides `printMethod()`:
+
+```java
+public class Superclass {
+
+    public void printMethod() {
+        System.out.println("Printed in Superclass.");
+    }
+}
+```
+
+```java
+public class Subclass extends Superclass {
+
+    // overrides printMethod in Superclass
+    public void printMethod() {
+        super.printMethod();
+        System.out.println("Printed in Subclass");
+    }
+    public static void main(String[] args) {
+        Subclass s = new Subclass();
+        s.printMethod();
+    }
+}
+```
+
+Output:
+```
+Printed in Superclass.
+Printed in Subclass
+```
+</div>
+
+Within `Subclass`, the simple name `printMethod()` refers to the one declared in `Subclass`, which overrides the one in `Superclass`. So, to refer to `printMethod()` inherited from `Superclass`, `Subclass` must use a qualified name, using `super` as shown.
+
+#### Subclass constructors
+
+A subclass constructor can invoke the superclass constructor. Invocation of a superclass constructor must be the first line in the subclass constructor. The syntax for calling a superclass constructor is `super()` (which invokes the no-argument constructor of the superclass) or `super(parameters)` (to invoke the superclass constructor with a matching parameter list).
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 The following example illustrates how to use the `super` keyword to invoke a superclass's constructor. Recall from the Bicycle example that `MountainBike` is a subclass of `Bicycle`. Here is the `MountainBike` (subclass) constructor that calls the superclass constructor and then adds some initialization code of its own (i.e., `seatHeight = startHeight;`):
+
+```java
+public MountainBike(
+        int startHeight, int startSpeed, int startGear) {
+
+    super(startSpeed, startGear);
+    seatHeight = startHeight;
+}
+```
+</div>
+
+**Note:** If a constructor does not explicitly invoke a superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the superclass. If the superclass does not have a no-argument constructor, you will get a compile-time error. `Object` does have such a constructor, so if `Object` is the only superclass, there is no problem.
+
+<details style={{border: '1px solid #e0e0e0', borderRadius: '5px', padding: '10px', marginTop: '15px', backgroundColor: '#f5f5f5'}}>
+<summary><strong>📝 Exercises:</strong></summary>
+
+<div style={{marginTop: '10px'}}>
+
+<details style={{border: '1px solid #2196F3', borderRadius: '5px', padding: '10px', backgroundColor: '#E3F2FD'}}>
+<summary><strong>[Key Exercise] inherit the Task class</strong></summary>
+
+**Background:** Suppose we are creating a software to manage various tasks a person has to do. Two types of such tasks are,
+- **Todos**: i.e., things that needs to be done some day e.g., 'Read the book Lord of the Rings'
+- **Deadlines**: i.e., things to be done by a specific date/time e.g., 'Read the text book by Nov 25th'
+
+The `Task` class is given below:
+
+```java
+public class Task {
+    protected String description;
+
+    public Task(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+}
+```
+
+1. Write a `Todo` class that inherits from the `Task` class.
+   - It should have an additional `boolean` field `isDone` to indicate whether the todo is done or not done.
+   - It should have a `isDone()` method to access the `isDone` field and a `setDone(boolean)` method to set the `isDone` field.
+
+2. Write a `Deadline` class that inherits from the `Todo` class that you implemented in the previous step. It should have,
+   - an additional `String` field `by` to store the details of when the task to be done e.g., Jan 25th 5pm
+   - a `getBy()` method to access the value of the `by` field, and a corresponding `setBy(String)` method.
+   - a constructor of the form `Deadline(String description, String by)`
+
+The expected behavior of the two classes is as follows:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // create a todo task and print details
+        Todo t = new Todo("Read a good book");
+        System.out.println(t.getDescription());
+        System.out.println(t.isDone());
+
+        // change todo fields and print again
+        t.setDone(true);
+        System.out.println(t.isDone());
+
+        // create a deadline task and print details
+        Deadline d = new Deadline("Read textbook", "Nov 16");
+        System.out.println(d.getDescription());
+        System.out.println(d.isDone());
+        System.out.println(d.getBy());
+
+        // change deadline details and print again
+        d.setDone(true);
+        d.setBy("Postponed to Nov 18th");
+        System.out.println(d.isDone());
+        System.out.println(d.getBy());
+    }
+}
+```
+
+Expected output:
+```
+Read a good book
+false
+true
+Read textbook
+false
+Nov 16
+true
+Postponed to Nov 18th
+```
+
+<details>
+<summary>💡 Hint</summary>
+
+Remember:
+- Use `extends` keyword for inheritance
+- `Todo` extends `Task`
+- `Deadline` extends `Todo`
+- Use `super()` to call parent constructors
+- The `protected` access modifier in the `Task` class allows subclasses to access the field directly
+</details>
+
+<details>
+<summary>Answer</summary>
+
+```java
+public class Todo extends Task {
+    private boolean isDone;
+    
+    public Todo(String description) {
+        super(description);
+        this.isDone = false;
+    }
+    
+    public boolean isDone() {
+        return isDone;
+    }
+    
+    public void setDone(boolean isDone) {
+        this.isDone = isDone;
+    }
+}
+
+public class Deadline extends Todo {
+    private String by;
+    
+    public Deadline(String description, String by) {
+        super(description);
+        this.by = by;
+    }
+    
+    public String getBy() {
+        return by;
+    }
+    
+    public void setBy(String by) {
+        this.by = by;
+    }
+}
+```
+</details>
+</details>
+
+</div>
+</details>
+
+## [W1.3] OOP: Polymorphism
+
+### W1.3a 🎯🎯 : Paradigms → OOP → Polymorphism → What
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain OOP polymorphism</span>
+</div>
+
+> The ability of different objects to respond, each in its own way, to identical messages is called polymorphism.
+
+<div style={{backgroundColor: '#e8f4f8', padding: '10px', margin: '10px 0', borderLeft: '4px solid #1e90ff'}}>
+-- Object-Oriented Programming with Objective-C, Apple
+</div>
+
+Polymorphism allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Assume classes `Cat` and `Dog` are both subclasses of the `Animal` class. You can write code targeting `Animal` objects and use that code on `Cat` and `Dog` objects, achieving possibly different results based on whether it is a `Cat` object or a `Dog` object. Some examples:
+
+- Declare an array of type `Animal` and still be able to store `Dog` and `Cat` objects in it.
+- Define a method that takes an `Animal` object as a parameter and yet be able to pass `Dog` and `Cat` objects to it.
+- Call a method on a `Dog` or a `Cat` object as if it is an `Animal` object (i.e., without knowing whether it is a `Dog` object or a `Cat` object) and get a different response from it based on its actual class e.g., call the `Animal` class's method `speak()` on object `a` and get a "Meow" as the return value if `a` is a `Cat` object and "Woof" if it is a `Dog` object.
+</div>
+
+**Polymorphism** literally means "ability to take many forms".
+
+## [W1.4] Java: Collections
+
+### W1.4a 🎯🎯 : C++ to Java → Collections → The collections framework
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain the Collections framework</span>
+</div>
+
+This section uses extracts from the -- Java Tutorial, with some adaptations.
+
+A **collection** — sometimes called a container — is simply an object that groups multiple elements into a single unit. Collections are used to store, retrieve, manipulate, and communicate aggregate data.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Typically, collections represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers).
+</div>
+
+The **collections framework** is a unified architecture for representing and manipulating collections. It contains the following:
+
+**Interfaces:** These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Example: the `List<E>` interface can be used to manipulate list-like collections which may be implemented in different ways such as `ArrayList<E>` or `LinkedList<E>`.
+</div>
+
+**Implementations:** These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Example: the `ArrayList<E>` class implements the `List<E>` interface while the `HashMap<K, V>` class implements the `Map<K, V>` interface.
+</div>
+
+**Algorithms:** These are the methods that perform useful computations, such as searching and sorting, on objects that implement collection interfaces.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Example: the `sort(List<E>)` method can sort a collection that implements the `List<E>` interface.
+</div>
+
+The following list describes the core collection interfaces:
+
+- **Collection** — the root of the collection hierarchy
+- **Set** — a collection that cannot contain duplicate elements
+- **List** — an ordered collection (sometimes called a sequence)
+- **Queue** — a collection used to hold multiple elements prior to processing
+- **Map** — an object that maps keys to values
+
+### W1.4b 🎯 : C++ to Java → Collections → The ArrayList class
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can use the ArrayList class</span>
+</div>
+
+The `ArrayList` class is a resizable-array implementation of the `List` interface. Unlike a normal array, an `ArrayList` can grow in size as you add more items to it.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Example using `ArrayList`:
+
+```java
+import java.util.ArrayList;
+
+public class ArrayListDemo {
+    public static void main(String args[]) {
+        ArrayList<String> items = new ArrayList<>();
+
+        items.add("Apple");
+        items.add("Box"); 
+        items.add("Cup");
+        
+        System.out.println("Items: " + items);
+        System.out.println("Size: " + items.size());
+        System.out.println("First item: " + items.get(0));
+        
+        items.remove("Box");
+        System.out.println("After removing Box: " + items);
+    }
+}
+```
+
+Output:
+```
+Items: [Apple, Box, Cup]
+Size: 3
+First item: Apple
+After removing Box: [Apple, Cup]
+```
+</div>
+
+## [W1.5] Exception Handling
+
+### W1.5a 🎯🎯 : Implementation → Error Handling → Introduction → What
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain error handling</span>
+</div>
+
+Well-written applications include error-handling code that allows them to recover gracefully from unexpected errors. When an error occurs, the application may need to request user intervention, or it may be able to recover on its own.
+
+### W1.5b 🎯🎯 : Implementation → Error Handling → Exceptions → What
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain exceptions</span>
+</div>
+
+**Exceptions** are used to deal with 'unusual' but not entirely unexpected situations that the program might encounter at runtime.
+
+> The term exception is shorthand for the phrase "exceptional event." An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
+
+<div style={{backgroundColor: '#e8f4f8', padding: '10px', margin: '10px 0', borderLeft: '4px solid #1e90ff'}}>
+–- Java Tutorial (Oracle Inc.)
+</div>
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 Examples:
+- A network connection encounters a timeout due to a slow server.
+- The code tries to read a file from the hard disk but the file is corrupted and cannot be read.
+</div>
+
+### W1.5c 🎯🎯 : C++ to Java → Exceptions → What are Exceptions?
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain Java Exceptions</span>
+</div>
+
+There are three basic categories of exceptions In Java:
+
+**Checked exceptions:** exceptional conditions that a well-written application should anticipate and recover from.
+
+**Errors:** exceptional conditions that are external to the application, and that the application usually cannot anticipate or recover from.
+
+**Runtime exceptions:** conditions that are internal to the application, and that the application usually cannot anticipate or recover from. These usually indicate programming bugs.
+
+### W1.5d 🎯🎯🎯 : Implementation → Error Handling → Exceptions → How
+
+<div style={{border: '1px solid #ccc', padding: '15px', margin: '15px 0', borderRadius: '5px', backgroundColor: '#f9f9f9'}}>
+<span style={{fontWeight: 'bold', color: '#d14'}}>🏆 Can explain how exception handling is done typically</span>
+</div>
+
+Most languages allow code that encountered an "exceptional" situation to encapsulate details of the situation in an Exception object and throw/raise that object so that another piece of code can catch it and deal with it.
+
+<div style={{backgroundColor: '#f0f8ff', padding: '10px', margin: '10px 0', borderRadius: '5px'}}>
+📦 When an error occurs at some point in the execution, the code being executed creates an exception object and hands it off to the runtime system. The runtime system attempts to find something to handle it in the call stack. If an appropriate handler is found, the runtime system passes the exception to the handler. If no handler is found, the program terminates.
+</div>
+
+  </TabItem>
+  <TabItem label="🗂️ Project">
+
+<div style={{padding: '2rem', background: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '8px', textAlign: 'center'}}>
+  <h3 style={{margin: 0, color: '#666'}}>There are no project activities allocated for this week.</h3>
+</div>
+
+  </TabItem>
+  <TabItem label="👥 Tutorial">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p>This is the <strong>👥 Tutorial</strong> tab of this week. It contains information relevant to the week's tutorial (if any).</p>
+  <p style={{marginBottom: 0}}>ℹ️ We use <code>tutorial N</code> to mean <em>the tutorial in week N</em>.</p>
+</div>
+
+<div style={{padding: '2rem', background: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '8px', textAlign: 'center'}}>
+  <h3 style={{margin: 0, color: '#666'}}>There is no tutorial in week 1.</h3>
+</div>
+
+  </TabItem>
+</Tabs>
+
+<WeekNavigation weekNumber={1} />
+

@@ -1,0 +1,487 @@
+/* CS2103 Theme for Starlight */
+
+/* Global text color reset to prevent white text on white background */
+* {
+  color: inherit;
+}
+
+/* Light Mode (Default) */
+:root {
+  /* CS2103 Brand Colors */
+  --cs2103-primary: #1fa29e;
+  --cs2103-primary-dark: #178682;
+  --cs2103-primary-light: #25c2bc;
+  --cs2103-yellow: #ffa500;
+  --cs2103-yellow-light: #ffb52e;
+  
+  /* Override Starlight color variables for light mode */
+  --sl-color-accent: var(--cs2103-primary);
+  --sl-color-accent-high: var(--cs2103-primary-dark);
+  --sl-color-accent-low: rgba(31, 162, 158, 0.15);
+  --sl-color-text: #000000;
+  --sl-color-text-accent: var(--cs2103-primary-dark);
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-nav: #ffffff;
+  --sl-color-bg-sidebar: #f8f9fa;
+  --sl-color-hairline: #e0e0e0;
+  --sl-color-gray-1: #e0e0e0;
+  --sl-color-gray-2: #cccccc;
+  --sl-color-gray-3: #999999;
+  --sl-color-gray-4: #666666;
+  --sl-color-gray-5: #333333;
+  --sl-color-gray-6: #f5f5f5;
+  --sl-color-black: #000000;
+  --sl-color-white: #000000;
+  
+  /* Typography */
+  --sl-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --sl-font-system-mono: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+}
+
+/* Explicit light mode overrides */
+:root:not([data-theme="dark"]) {
+  --sl-color-bg: #ffffff !important;
+  --sl-color-bg-nav: #ffffff !important;
+  --sl-color-text: #000000 !important;
+  --sl-color-white: #000000 !important;
+}
+
+/* Force card titles to be black in light mode */
+:root:not([data-theme="dark"]) .card .title {
+  color: #000000 !important;
+}
+
+/* Force search input text to be black in light mode */
+:root:not([data-theme="dark"]) input[type="search"] {
+  color: #000000 !important;
+}
+
+/* Dark Mode */
+:root[data-theme="dark"] {
+  /* Override colors for dark mode */
+  --sl-color-accent: var(--cs2103-primary-light);
+  --sl-color-accent-high: var(--cs2103-primary);
+  --sl-color-accent-low: rgba(37, 194, 188, 0.15);
+  --sl-color-text: #ffffff;
+  --sl-color-text-accent: var(--cs2103-primary-light);
+  --sl-color-bg: #0f0f0f;
+  --sl-color-bg-nav: #1a1a1a;
+  --sl-color-bg-sidebar: #141414;
+  --sl-color-hairline: #333333;
+  --sl-color-gray-1: #e0e0e0;
+  --sl-color-gray-2: #cccccc;
+  --sl-color-gray-3: #999999;
+  --sl-color-gray-4: #666666;
+  --sl-color-gray-5: #333333;
+  --sl-color-gray-6: #1a1a1a;
+  --sl-color-black: #000000;
+  --sl-color-white: #ffffff;
+}
+
+
+/* Ensure proper text color inheritance in light mode */
+:root:not([data-theme="dark"]) body,
+:root:not([data-theme="dark"]) .sl-markdown-content,
+:root:not([data-theme="dark"]) .sl-markdown-content * {
+  color: var(--sl-color-text);
+}
+
+[data-theme="dark"] .sl-markdown-content :is(p, li, div) {
+  color: #ffffff;
+}
+
+/* Hero section styling */
+[data-theme="dark"] .hero-tagline {
+  color: #ffffff !important;
+}
+
+/* Button text colors */
+[data-theme="dark"] a[href] {
+  color: var(--sl-color-text-accent);
+}
+
+[data-theme="dark"] .action {
+  color: #ffffff !important;
+}
+
+/* Announcement Banner Styles */
+
+/* Banner base styles - Full width edge-to-edge */
+.announcement-banner {
+  display: block;
+  margin: 0;
+  padding: 0; /* Explicitly set padding to 0 to override any browser defaults */
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: center;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  animation: slideIn 0.4s ease-out;
+  transition: all 0.3s ease;
+}
+
+/* Info banner - CS2103 Primary with gradient */
+.announcement-banner.info {
+  background: linear-gradient(135deg, var(--cs2103-primary) 0%, var(--cs2103-primary-light) 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(31, 162, 158, 0.3);
+}
+
+/* Warning banner - Modern gradient */
+.announcement-banner.warning {
+  background: linear-gradient(135deg, #2d3561 0%, #44468b 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(45, 53, 97, 0.3);
+}
+
+/* Remove gaps between consecutive banners */
+.announcement-banner + .announcement-banner {
+  margin-top: 0;
+  border-top: none;
+}
+
+/* Announcement container to ensure no gaps */
+.announcement-container {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .announcement-banner {
+  backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .announcement-banner.info {
+  background: linear-gradient(135deg, rgba(31, 162, 158, 0.9) 0%, rgba(37, 194, 188, 0.9) 100%);
+  border-bottom: 1px solid rgba(37, 194, 188, 0.3);
+  box-shadow: 0 2px 12px rgba(37, 194, 188, 0.4);
+}
+
+[data-theme="dark"] .announcement-banner.warning {
+  background: linear-gradient(135deg, rgba(45, 53, 97, 0.9) 0%, rgba(68, 70, 139, 0.9) 100%);
+  border-bottom: 1px solid rgba(68, 70, 139, 0.3);
+  box-shadow: 0 2px 12px rgba(68, 70, 139, 0.4);
+}
+
+/* Banner content is styled in the component */
+
+.announcement-banner .dismiss-btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  padding: 0 8px;
+  line-height: 1;
+}
+
+.announcement-banner .dismiss-btn:hover {
+  opacity: 1;
+}
+
+/* Fix banner text colors for dismiss button */
+.announcement-banner.info .dismiss-btn {
+  color: #000000 !important;
+}
+
+.announcement-banner.warning .dismiss-btn {
+  color: #ffffff !important;
+}
+
+/* Smooth animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Custom navbar styling */
+.site-title {
+  font-weight: 600;
+}
+
+/* Week navigation styling */
+.week-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: var(--sl-color-gray-6);
+  border-radius: 0.5rem;
+}
+
+:root:not([data-theme="dark"]) .week-navigation a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+[data-theme="dark"] .week-navigation a {
+  color: var(--sl-color-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.week-navigation a:hover:not(.disabled) {
+  color: var(--sl-color-accent);
+}
+
+.week-navigation .disabled {
+  color: var(--sl-color-gray-4);
+  pointer-events: none;
+}
+
+/* Tab styling enhancements */
+.sl-markdown-content .tablist-wrapper {
+  margin: 2rem 0;
+}
+
+/* Badge styling */
+.badge {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  font-size: 0.875em;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.badge.tip {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge.note {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.badge.caution {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.badge.danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Dark mode badges */
+[data-theme="dark"] .badge.tip {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: #90ee90;
+}
+
+[data-theme="dark"] .badge.note {
+  background-color: rgba(0, 123, 255, 0.2);
+  color: #87ceeb;
+}
+
+[data-theme="dark"] .badge.caution {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #ffd700;
+}
+
+[data-theme="dark"] .badge.danger {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: #ff6b6b;
+}
+
+/* Empty state styling */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--sl-color-gray-6);
+  border-radius: 0.5rem;
+}
+
+:root:not([data-theme="dark"]) .empty-state {
+  color: var(--sl-color-gray-2);
+}
+
+[data-theme="dark"] .empty-state {
+  color: var(--sl-color-gray-2);
+}
+
+/* Quick Access cards */
+:root:not([data-theme="dark"]) .card {
+  background-color: var(--sl-color-bg);
+  color: #000000;
+}
+
+:root:not([data-theme="dark"]) .card p {
+  color: #000000 !important;
+}
+
+
+[data-theme="dark"] .card {
+  background-color: var(--sl-color-bg-sidebar);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .card p {
+  color: #cccccc !important;
+}
+
+/* Ensure proper text colors in dark mode cards */
+[data-theme="dark"] .card .title {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .card .title span {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .card .body {
+  color: #cccccc !important;
+}
+
+[data-theme="dark"] .card .body * {
+  color: #cccccc !important;
+}
+
+/* Hero Actions */
+[data-theme="dark"] .action.primary {
+  background-color: var(--cs2103-primary);
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .action.secondary {
+  border-color: var(--cs2103-primary);
+  color: var(--cs2103-primary-light) !important;
+}
+
+/* Heading colors */
+:root:not([data-theme="dark"]) :is(h1, h2, h3, h4, h5, h6) {
+  color: #000000;
+}
+
+[data-theme="dark"] :is(h1, h2, h3, h4, h5, h6) {
+  color: #ffffff;
+}
+
+/* Course info box */
+:root:not([data-theme="dark"]) .sl-markdown-content > div {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .sl-markdown-content > div {
+  color: #ffffff !important;
+}
+
+/* Markdown content colors */
+:root:not([data-theme="dark"]) .sl-markdown-content :is(p, li, div, span) {
+  color: #000000;
+}
+
+[data-theme="dark"] .sl-markdown-content {
+  color: #ffffff;
+}
+
+/* Fix tagline specific styling */
+[data-theme="dark"] [data-page-title] + p {
+  color: #cccccc !important;
+}
+
+/* Splash template specific fixes */
+[data-theme="dark"] .splash .sl-markdown-content {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .splash p {
+  color: #cccccc !important;
+}
+
+/* Hero tagline fix for both modes */
+:root:not([data-theme="dark"]) .hero-tagline {
+  color: var(--sl-color-gray-3) !important;
+}
+
+[data-theme="dark"] .hero-tagline {
+  color: #ffffff !important;
+}
+
+/* Ensure body background colors */
+body {
+  background-color: var(--sl-color-bg) !important;
+}
+
+/* Light mode specific body */
+:root:not([data-theme="dark"]) body {
+  background-color: #ffffff !important;
+}
+
+/* Dark mode specific body */
+[data-theme="dark"] body {
+  background-color: #0f0f0f !important;
+}
+
+/* Button hover states */
+[data-theme="dark"] .action:hover {
+  opacity: 0.9;
+}
+
+/* Details/Summary elements */
+:root:not([data-theme="dark"]) details {
+  color: #000000;
+}
+
+:root:not([data-theme="dark"]) summary {
+  color: #000000;
+}
+
+[data-theme="dark"] details {
+  color: #ffffff;
+}
+
+[data-theme="dark"] summary {
+  color: #ffffff;
+}
+
+/* Preserve specific color overrides for special elements */
+:root:not([data-theme="dark"]) a[href] {
+  color: var(--sl-color-text-accent);
+}
+
+/* Announcement banner specific colors */
+:root:not([data-theme="dark"]) .announcement-banner.info,
+:root:not([data-theme="dark"]) .announcement-banner.info * {
+  color: #000000 !important;
+}
+
+:root:not([data-theme="dark"]) .announcement-banner.warning,
+:root:not([data-theme="dark"]) .announcement-banner.warning * {
+  color: #ffffff !important;
+}

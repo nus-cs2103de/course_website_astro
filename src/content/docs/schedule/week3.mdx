@@ -1,0 +1,522 @@
+---
+title: Week 3 [Mon, Jan 27th] - Java, Unit Testing
+description: Week 3 content for CS2103
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import WeekNavigation from '../../../components/WeekNavigation.astro';
+
+<WeekNavigation weekNumber={3} />
+
+<Tabs>
+  <TabItem label="📋 Summary">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <h3 style={{margin: '0 0 0.5rem 0'}}>ℹ️ Tutorial Start</h3>
+  <p style={{marginBottom: 0}}><strong>We start tutorials this week</strong>, starting from Wed, Jan 28th. The tutorial timetable is on the course website.</p>
+</div>
+
+<div style={{padding: '1rem', background: '#fff3cd', border: '1px solid #ffeaa7', borderRadius: '8px', marginBottom: '1rem'}}>
+  <h3 style={{margin: '0 0 0.5rem 0'}}>🎮 In-video quizzes can earn you bonus participation marks!</h3>
+  <p>Starting from week 3, some pre-recorded videos in the Topics tab will contain in-video quizzes.</p>
+  <p style={{marginBottom: 0}}>Videos containing quizzes are labelled <strong>Video Q+</strong> (instead of the usual Video).</p>
+</div>
+
+### 📊 Weekly Overview
+
+<div style={{padding: '1rem', background: '#e3f2fd', borderRadius: '8px'}}>
+  <h4 style={{margin: '0 0 1rem 0'}}>Focus This Week</h4>
+  
+  **Software Engineering Topics:**
+  - **Java**: JavaDoc, File I/O, Packages, JAR files
+  - **Testing**: Developer Testing, Unit Testing, JUnit
+  - **Project Management**: RCS Branching, Creating Pull Requests
+  - **Code Quality**: Coding Standards
+  
+  **Project Work:**
+  - **iP**: Continue with advanced increments (Level 7-9, A-JavaDoc, etc.)
+  - **tP**: Kickoff - form teams, get familiar with AB3
+</div>
+
+  </TabItem>
+  <TabItem label="ℹ️ Admin">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p style={{marginBottom: 0}}>This is the <strong>ℹ️ Admin</strong> tab of this week. It contains admin info relevant to this week.</p>
+</div>
+
+### Individual Project (iP) Tasks
+
+1. **Finish leftover iP tasks**
+   - Complete any remaining iP tasks from previous weeks
+
+2. **Create a PR to the upstream repo**
+   - Create pull request to `se-edu/addressbook-level3`
+
+3. **Add increments as branches:**
+   - **Level-7: Save** - Save tasks to hard disk
+   - **Level-8: Dates and Times** - Use dates/times for deadlines
+
+4. **Add increments:**
+   - **A-MoreOOP: Use More OOP** - Refactor code to be more OOP
+   - **A-Packages: Organize into Packages** - Organize classes into packages
+   - **A-Gradle: Use Gradle** - Use Gradle for build automation
+   - **A-JUnit: Add JUnit Tests** - Add unit tests using JUnit
+   - **A-Jar: Create a JAR File** - Package app as executable JAR
+
+5. **Add increments as parallel branches:**
+   - **A-JavaDoc: JavaDoc** - Add JavaDoc comments
+   - **A-CodingStandard: Follow the Coding Standard** - Follow Java coding standard
+   - **Level-9: Find** - Find tasks by keyword
+
+6. **Start learning JavaFX** (preparation for GUI)
+
+### Team Project (tP) Tasks
+
+<div style={{padding: '1rem', background: '#e3f2fd', borderRadius: '8px', marginBottom: '1rem'}}>
+  <h4 style={{margin: '0 0 0.5rem 0'}}>🚀 tP Week 3: Kickoff</h4>
+</div>
+
+1. **Get familiar with AB3** <span style={{background: '#6c757d', color: 'white', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.9rem'}}>⏰ Friday 23:59</span>
+   - Explore AddressBook Level 3 features
+   - Understand the codebase structure
+   - Try out all features
+
+2. **Set up meeting time**
+   - Decide on a weekly project meeting time/venue
+   - Agree on mode of communication
+   - Set up project collaboration tools
+
+3. **Check collective iP status**
+   - Review each member's iP progress
+   - Help those who are facing difficulties
+   - Share tips and tricks
+
+### Other Admin Tasks
+
+- **Submit weekly quiz** as usual
+- **Attend your first tutorial** this week
+
+</TabItem>
+  <TabItem label="📑 Topics">
+
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p style={{marginBottom: 0}}>This is the <strong>📑 Topics</strong> tab of this week. It contains topics allocated to this week.</p>
+</div>
+
+### Software Engineering Topics
+
+#### 🔧 Implementation
+
+<details>
+<summary><strong>Java: JavaDoc</strong></summary>
+
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**JavaDoc** is a documentation generator for Java code.
+
+**Basic syntax:**
+```java
+/**
+ * Returns the sum of two integers.
+ * 
+ * @param a the first integer
+ * @param b the second integer
+ * @return the sum of a and b
+ */
+public int add(int a, int b) {
+    return a + b;
+}
+```
+
+**Key tags:**
+
+@param - describes parameters
+@return - describes return value
+@throws - describes exceptions
+@author - author information
+@since - version information
+
+</div>
+</details>
+<details>
+<summary><strong>Java: File I/O</strong></summary>
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**Reading files:**
+```java
+try {
+    List<String> lines = Files.readAllLines(Paths.get("data.txt"));
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+
+**Writing files:**
+```java
+try {
+    Files.write(Paths.get("output.txt"), lines);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+
+**Important:** Always handle IOException when doing file operations!
+</div>
+</details>
+<details>
+<summary><strong>Java: Packages</strong></summary>
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**Packages** organize related classes and interfaces.
+
+**Package declaration:**
+```java
+package com.mycompany.myapp;
+```
+
+**Naming conventions:**
+
+Use lowercase
+Use reverse domain name
+Separate with dots
+e.g., com.example.project.utils
+
+Benefits:
+
+Avoid naming conflicts
+Control access
+Organize code logically
+
+</div>
+</details>
+<details>
+<summary><strong>Java: JAR Files</strong></summary>
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**JAR (Java Archive)** files package Java applications.
+
+**Creating JAR:**
+```bash
+jar cf myapp.jar -C build/classes .
+```
+
+**Creating executable JAR:**
+
+Add manifest with Main-Class
+Include all dependencies
+Make it runnable with java -jar
+
+</div>
+</details>
+
+#### 🧪 Testing
+<details>
+<summary><strong>Developer Testing</strong></summary>
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**Developer testing** is testing done by developers themselves.
+
+**Why important:**
+
+Find bugs early
+Ensure code works as intended
+Confidence in changes
+Documentation of behavior
+
+Types:
+
+Unit testing
+Integration testing
+System testing
+
+</div>
+</details>
+<details>
+<summary><strong>Unit Testing</strong></summary>
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**Unit testing** tests individual units/components in isolation.
+
+**Characteristics:**
+
+Test single methods/classes
+Fast execution
+Isolated from dependencies
+Automated
+
+Best practices:
+
+Test one thing at a time
+Use descriptive names
+Follow AAA pattern (Arrange, Act, Assert)
+Keep tests independent
+
+</div>
+</details>
+<details>
+<summary><strong>JUnit</strong></summary>
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**JUnit** is a popular Java testing framework.
+
+**Basic test:**
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class CalculatorTest {
+    @Test
+    void testAdd() {
+        Calculator calc = new Calculator();
+        assertEquals(5, calc.add(2, 3));
+    }
+}
+```
+
+**Common assertions:**
+
+assertEquals(expected, actual)
+assertTrue(condition)
+assertNull(object)
+assertThrows(exception, executable)
+
+</div>
+</details>
+
+#### 📊 Project Management
+<details>
+<summary><strong>RCS: Branching</strong></summary>
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**Branching** allows parallel development.
+
+**Common commands:**
+
+git branch feature-x - create branch
+git checkout feature-x - switch branch
+git merge feature-x - merge branch
+
+Best practices:
+
+Use descriptive branch names
+Keep branches short-lived
+Merge frequently
+Delete merged branches
+
+</div>
+</details>
+<details>
+<summary><strong>RCS: Creating Pull Requests</strong></summary>
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**Pull Requests (PRs)** propose changes to a repository.
+
+**Process:**
+
+Fork repository
+Create feature branch
+Make changes
+Push to fork
+Create PR
+Code review
+Merge
+
+Good PR practices:
+
+Clear title and description
+Small, focused changes
+Include tests
+Respond to feedback
+
+</div>
+</details>
+
+#### 🏗️ Code Quality
+<details>
+<summary><strong>Coding Standards</strong></summary>
+<div style={{padding: '1rem', background: '#f8f9fa', borderRadius: '8px', marginTop: '1rem'}}>
+
+**Coding standards** ensure consistent, readable code.
+
+**Java conventions:**
+
+Classes: PascalCase (MyClass)
+Methods/variables: camelCase (myMethod)
+Constants: UPPER_SNAKE_CASE (MAX_SIZE)
+Packages: lowercase (com.example)
+
+Other standards:
+
+Indentation (4 spaces)
+Line length (< 120 chars)
+Braces on same line
+Meaningful names
+
+</div>
+</details>
+  </TabItem>
+  <TabItem label="🗂️ Project">
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p style={{marginBottom: 0}}>This is the <strong>🗂️ Project</strong> tab of this week. It contains project-related information relevant to this week.</p>
+</div>
+
+### Individual Project (iP)
+
+Continue evolving your Duke chatbot with more advanced features.
+
+#### This Week's iP Tasks
+
+Complete remaining increments from Week 2 (if any)
+Add these increments as branches:
+
+Level-7: Save - Save data to hard disk
+Level-8: Dates and Times - Parse dates/times properly
+
+
+Add these increments:
+
+A-MoreOOP - Refactor to be more OOP
+A-Packages - Organize into packages
+A-Gradle - Use Gradle
+A-JUnit - Add JUnit tests
+A-Jar - Create JAR file
+
+
+Add as parallel branches:
+
+A-JavaDoc - Add documentation
+A-CodingStandard - Follow standards
+Level-9: Find - Search functionality
+
+
+
+### Team Project (tP)
+
+<div style={{padding: '1rem', background: '#fff3cd', border: '1px solid #ffeaa7', borderRadius: '8px', marginBottom: '1rem'}}>
+  <h3 style={{margin: '0 0 0.5rem 0'}}>🎯 tP Kickoff Week!</h3>
+  <p style={{marginBottom: 0}}>This week marks the beginning of the team project. Form your teams and get started!</p>
+</div>
+
+#### Week 3 tP Tasks
+
+Get familiar with AB3
+
+Download and set up AddressBook Level 3
+Run it and explore all features
+Read the User Guide and Developer Guide
+Understand the architecture
+
+
+Team formation & setup
+
+Teams formed during tutorial
+Exchange contact details
+Set up communication channels (Telegram/Discord/etc)
+Decide on weekly meeting schedule
+
+
+Help teammates with iP
+
+Review each other's iP progress
+Share knowledge and debug together
+Ensure everyone is on track
+
+
+
+<div style={{padding: '1rem', background: '#e3f2fd', borderRadius: '8px', marginTop: '1rem'}}>
+  <strong>💡 Tips:</strong>
+  <ul style={{marginBottom: 0}}>
+    <li>Start exploring AB3 early - it's a large codebase</li>
+    <li>Focus on understanding the architecture first</li>
+    <li>Try modifying small features to learn</li>
+  </ul>
+</div>
+  </TabItem>
+  <TabItem label="👥 Tutorial">
+<div style={{padding: '1rem', background: '#d1ecf1', border: '1px solid #bee5eb', borderRadius: '8px', marginBottom: '1rem'}}>
+  <p style={{marginBottom: 0}}>This is the <strong>👥 Tutorial</strong> tab of this week. It contains information relevant to the week's tutorial.</p>
+</div>
+
+### Tutorial 3 Activities
+<div style={{padding: '1rem', background: '#fff3cd', border: '1px solid #ffeaa7', borderRadius: '8px', marginBottom: '1rem'}}>
+  <strong>⏰ Duration:</strong> 50 minutes<br/>
+  <strong>👥 Mode:</strong> Face-to-face
+</div>
+
+#### 1. **Team Formation** (15 min)
+
+CS2103 students only form teams now
+CS2113 students form teams later
+Team size: 4-5 members
+Exchange contact information
+
+#### 2. **Introductions** (10 min)
+
+Introduce yourselves to your team
+Share your programming background
+Discuss your goals for the course
+
+#### 3. **Coding Standards Exercise** (15 min)
+
+Find coding standard violations in this code:
+
+```java
+public class Task
+{
+    private String description;
+    private boolean is_done;
+    
+    public Task(String d) {
+        description=d;
+        is_done=false;
+    }
+    
+    public boolean getStatus()
+    {
+        return is_done;
+    }
+    
+    public void set_done(boolean done)
+    {
+        is_done = done;
+    }
+}
+```
+
+<details>
+<summary>Click to see violations</summary>
+
+Opening brace should be on same line as class/method declaration
+Variable name is_done should be camelCase: isDone
+Parameter d should have meaningful name: description
+Method set_done should be camelCase: setDone
+Inconsistent spacing around = operator
+Method getStatus() should be named isDone() for boolean
+
+</details>
+
+#### 4. **Team Planning** (5 min)
+
+Decide on weekly meeting time
+Set up team communication channel
+Plan how to help each other with iP
+
+#### 5. **iP Troubleshooting** (5 min)
+
+Share any issues faced with iP
+Help teammates debug problems
+Exchange tips and solutions
+
+<div style={{padding: '1rem', background: '#e3f2fd', borderRadius: '8px', marginTop: '1rem'}}>
+  <strong>📝 Before leaving:</strong>
+  <ul style={{marginBottom: 0}}>
+    <li>Ensure all team members have exchanged contacts</li>
+    <li>Confirm your weekly meeting schedule</li>
+    <li>Submit team formation (if required by tutor)</li>
+  </ul>
+</div>
+  </TabItem>
+</Tabs>
+
+<WeekNavigation weekNumber={3} />

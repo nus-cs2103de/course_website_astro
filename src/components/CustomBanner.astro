@@ -1,0 +1,27 @@
+---
+import Default from '@astrojs/starlight/components/Banner.astro';
+import AnnouncementBanner from './AnnouncementBanner.astro';
+
+// Always show our custom banners, regardless of frontmatter
+---
+
+<!-- Our custom announcement banners -->
+<div class="announcement-system">
+  <AnnouncementBanner id="general" variant="info">
+    Hi Prof Pranavan, this is the new course website for CS2103DE built with Astro Starlight.
+  </AnnouncementBanner>
+  <AnnouncementBanner id="blended" variant="warning">
+    This course will be delivered in <strong>blended learning</strong> mode 
+    (i.e., a mix of online and F2F activities) this semester.
+  </AnnouncementBanner>
+</div>
+
+<!-- Also render any page-specific banner from frontmatter -->
+<Default {...Astro.props} />
+
+<style>
+  .announcement-system {
+    /* Banners will be in the correct place within Starlight's layout */
+    width: 100%;
+  }
+</style>
